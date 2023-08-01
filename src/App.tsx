@@ -4,7 +4,7 @@ import Landing from "./pages/Landing/Landing"
 function App() {
    return (
     <>
-      <div className="background">
+      <div className="wrapper">
         <Header/>
         <div className="container">
         <Landing/>
