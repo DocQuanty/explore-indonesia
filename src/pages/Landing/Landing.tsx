@@ -1,3 +1,4 @@
+import Header from "../../components/Header/Header";
 import s from "../Landing/landing.module.scss"
 const Landing = () => {
 return(

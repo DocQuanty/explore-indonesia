@@ -1,4 +1,5 @@
 import s from './Header.module.scss';
+import "../../assets/style/global.scss"
 import logoRose from "../../assets/images/icons/header/logo-rose.svg"
 import loop from "../../assets/images/icons/header/loop.svg"
 const Header = () => {
