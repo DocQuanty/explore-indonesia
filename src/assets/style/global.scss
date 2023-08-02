@@ -6,10 +6,11 @@
   position: relative;
 }
 // global colors
-
+$linear-gradient_darkBlue: rgba(1, 132, 149, 0) 0%;
+$linear-gradient_blue: #018394 100%;
 // global media
 $mobile: 767px;
-$tablet: 1023px;
+$tablet: 1024px;
 $desktop: 1279px;
 $large-desktop: 1280px;
 // $large-desktop: 1280px;
