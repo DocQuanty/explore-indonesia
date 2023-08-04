@@ -5,7 +5,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 28px 140px 0 40px;
-
+  @media (max-width: $tablet) {
+    padding: 10px 70px 0 10px;
+  }
   .logo {
     position: relative;
     display: flex;
@@ -75,7 +77,7 @@
   justify-content: space-between;
   align-items: flex-end;
   .search {
-    margin: 0px 40px 0px 0px;
+    // margin: 0px 40px 0px 0px;
     cursor: pointer;
     img {
       width: 24px;
