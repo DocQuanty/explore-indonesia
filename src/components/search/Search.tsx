@@ -1,9 +1,9 @@
 import s from "./Search.module.scss"
 import IconSearch from "./IconSearch"
 
-const searchToggle =() => {
+// const searchToggle =() => {
 
-}
+// }
 
 const Search = ()=>{
     return <div className={s.search}>

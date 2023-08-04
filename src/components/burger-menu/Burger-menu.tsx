@@ -2,6 +2,7 @@ import { useState } from "react";
 import s from "./Burger-menu.module.scss"
 const BurgerMenu = () => {
     const [isMenuOpen, setIsMenuOpen]=useState(false);
+    
     const burgerToggle=()=> {
         setIsMenuOpen(!isMenuOpen)
     }
