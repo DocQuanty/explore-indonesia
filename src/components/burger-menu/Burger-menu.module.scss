@@ -1,0 +1,51 @@
+.burgerMenu {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  &_burgerLine {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: translateY(19px);
+    }
+    &::after {
+      transform: translateY(7px);
+    }
+  }
+
+  &_menuList {
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 36px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.6s ease-out;
+  }
+}
+.open .burgerMenu_menuList {
+  position: absolute;
+  top: 20px;
+  max-height: 300px; // Встановіть бажану висоту
+  opacity: 1;
+}
+
+.close .burgerMenu_menuList {
+  position: absolute;
+  top: 20px;
+  max-height: 0px; // Встановіть бажану висоту
+  opacity: 0;
+}

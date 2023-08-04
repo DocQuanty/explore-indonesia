@@ -2,6 +2,7 @@ import s from './Header.module.scss';
 import "../../assets/style/global.scss"
 import logoRose from "../../assets/images/icons/header/logo-rose.svg"
 import loop from "../../assets/images/icons/header/loop.svg"
+import BurgerMenu from '../burger-menu/Burger-menu';
 const Header = () => {
 return <>
     <div className={s.header}>
@@ -19,11 +20,9 @@ return <>
                 <div className={s.search}>
                     <img src={loop} alt="loop" />
                 </div>
-                <div className={s.burgerMenu}>
-                    <div className={s.burgerLine}></div>
-                </div>
+                <BurgerMenu/>
             </div>
-    </div>Header
+    </div>
 </>
 };
 export default Header;
