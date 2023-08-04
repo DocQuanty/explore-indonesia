@@ -10,11 +10,10 @@ return <>
         <div className={s.burgerMenu_burgerLine}></div>
         <div className={s.burgerMenu_menuList}>
             <ul>
-                <li>lorem1</li>
-                <li>lorem2</li>
-                <li>lorem3</li>
-                <li>lorem4</li>
-                <li>lorem5</li>
+                <li><a href="#1">destinations</a></li>
+                <li><a href="#2">experiences</a></li>
+                <li><a href="#3">about</a></li>
+                <li><a href="#4">gallery</a></li>
             </ul>
         </div>
     </div>

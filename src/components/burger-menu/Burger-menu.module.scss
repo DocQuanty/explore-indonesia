@@ -40,6 +40,15 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s ease-out, opacity 0.6s ease-out;
+    a {
+      color: #fff;
+      font-family: DM Sans;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
 .open .burgerMenu_menuList {
@@ -53,6 +62,6 @@
 .close .burgerMenu_menuList {
   top: 60px;
   right: 0;
-  max-height: 0px; // Встановіть бажану висоту
+  max-height: 0px;
   opacity: 0;
 }

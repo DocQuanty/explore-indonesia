@@ -1,8 +1,8 @@
 import s from './Header.module.scss';
 import "../../assets/style/global.scss"
 import logoRose from "../../assets/images/icons/header/logo-rose.svg"
-import loop from "../../assets/images/icons/header/loop.svg"
 import BurgerMenu from '../burger-menu/Burger-menu';
+import Search from '../search/Search';
 const Header = () => {
 return <>
     <div className={s.header}>
@@ -17,9 +17,7 @@ return <>
                 <a className={s.headerLinks} href="#">gallery</a>
             </div>
             <div className={s.navigationMenu}>
-                <div className={s.search}>
-                    <img src={loop} alt="loop" />
-                </div>
+                <Search/>
                 <BurgerMenu/>
             </div>
     </div>
