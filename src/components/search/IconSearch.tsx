@@ -1,11 +1,21 @@
-
-
-const IconSearch = (color: {color:string}): JSX.Element => {
+import s from "./Search.module.scss"
+type IconSearchProps = {
+  color: string;
+  setIsMobile: (param: boolean) => void;
+};
+const IconSearch: React.FC<IconSearchProps>= ({color, setIsMobile}): JSX.Element => {
+  
+  const toggleHandler=()=>{
+    setIsMobile(false)
+  }
+  
   return (
     <svg
-      width="19"
-      height="18"
-      fill={color.color}
+      className={s.inputSearch}
+      onClick={toggleHandler}
+      width="25"
+      height="25"
+      fill={color}
       viewBox="0 0 19 18"
       xmlns="http://www.w3.org/2000/svg"
     >

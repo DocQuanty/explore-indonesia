@@ -6,7 +6,7 @@
   align-items: center;
   padding: 28px 140px 0 40px;
   @media (max-width: $tablet) {
-    padding: 10px 70px 0 10px;
+    padding: 10px 10px 0;
   }
   .logo {
     position: relative;
@@ -49,10 +49,11 @@
 
 .menu {
   width: 100%;
+  padding: 0px 15px 0px 0px;
 }
 .headerLinks {
   margin-right: 62px;
-  color: #fff;
+  color: $colorLinksMenu;
   font-family: DM Sans;
   font-size: 18px;
   font-weight: 700;

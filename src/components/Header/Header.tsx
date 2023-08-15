@@ -8,18 +8,18 @@ const Header = () => {
 
 return <>
     <div className={s.header}>
-            <a href='!' className={s.logo}>
+            <a href='/' className={s.logo}>
                 <img src={logoRose} alt="logoRose" />
                 <div className={s.textLogo}>Explore Indonesia</div>
             </a>
             <div className={s.menu}>
-                <a className={s.headerLinks} href="#">destinations</a>
-                <a className={s.headerLinks} href="#">experiences</a>
-                <a className={s.headerLinks} href="#">about</a>
-                <a className={s.headerLinks} href="#">gallery</a>
+                <a className={s.headerLinks} href="/destinations">destinations</a>
+                <a className={s.headerLinks} href="/experiences">experiences</a>
+                <a className={s.headerLinks} href="/about">about</a>
+                <a className={s.headerLinks} href="/gallery">gallery</a>
             </div>
             <div className={s.navigationMenu}>
-                <Search testField='thi is real test field' />
+                <Search />
                 <BurgerMenu/>
             </div>
     </div>
