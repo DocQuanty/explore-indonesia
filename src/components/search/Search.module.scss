@@ -21,6 +21,7 @@
 .inputSearch {
   cursor: pointer;
   @media (max-width: $desktop) {
+    height: 20px;
     width: 140px;
   }
 

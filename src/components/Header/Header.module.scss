@@ -33,6 +33,9 @@
         $linear-gradient_blue
       );
     }
+    @media (max-width: $mobile) {
+      margin: 0px 0px 0px 0px;
+    }
   }
   img {
     max-width: 49.026px;
