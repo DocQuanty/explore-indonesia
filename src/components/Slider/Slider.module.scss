@@ -1,0 +1,44 @@
+.slider {
+  &_background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    //   height: 1079px;
+    // background-image: url("../../assets/images/backgrounds/background01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        193deg,
+        rgba(0, 0, 0, 0.31) 0%,
+        rgba(0, 0, 0, 0.29) 100%
+      );
+    }
+  }
+
+  &_dynamic {
+    width: "4px";
+    background-color: "#DD2242";
+    position: "absolute";
+    top: 233;
+    left: 70;
+    transition: "width 0.5s ease-in-out";
+  }
+  &_line {
+    background-color: #fff;
+    width: 2px;
+    height: 296px;
+    position: absolute;
+    top: 233;
+    left: 70;
+    z-index: -1;
+  }
+}

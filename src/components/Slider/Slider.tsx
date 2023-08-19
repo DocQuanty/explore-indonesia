@@ -1,31 +1,48 @@
-import React, { useState } from 'react';
-import './Slider.scss'; // Подключаем стили (Slider.css)
+import React, { useState, useEffect } from 'react';
+import background01 from '../../assets/images/backgrounds/background01.png';
+import background02 from '../../assets/images/backgrounds/background01.png';
+import background03 from '../../assets/images/backgrounds/background02.jpg';
+import background04 from '../../assets/images/backgrounds/background02.jpg';
+import s from './Slider.module.scss';
 
-const Slider: React.FC = () => {
-  const [activeSlide, setActiveSlide] = useState<number>(0); // Текущий активный слайд
+const Slider = () => {
+  const backgrounds = [background01, background03, background02, background04 ];
+  const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
 
-  const handleSlideChange = (slideIndex: number) => {
-    setActiveSlide(slideIndex);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+    }, 3000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  const currentBackground = backgrounds[currentBackgroundIndex];
+  const progressPercentage = ((currentBackgroundIndex + 1) / backgrounds.length) * 100;
+  const currentHeight = (progressPercentage / 100) * 296;
+
+  const sliderStyles = {
+    backgroundImage: `url(${currentBackground})`,
+    backgroundSize: 'cover',
+  };
+
+  const progressStyles = {
+    maxHeight:currentHeight,
+    height: `${progressPercentage}%`,
+    width: "4px",
+    backgroundColor: "#DD2242",
+    position: "absolute",
+    top: 233,
+    left: 70,
   };
 
   return (
-    <div className="slider-container">
-      <div className="slider-progress">
-        {/* Полоска прогресса с секторами */}
-        <div className="progress-segment" style={{ width: `${(activeSlide + 1) * 33.33}%` }}></div>
-      </div>
-      <div className="slider">
-        {/* Слайды */}
-        <div className={`slide ${activeSlide === 0 ? 'active' : ''}`}>Slide 1</div>
-        <div className={`slide ${activeSlide === 1 ? 'active' : ''}`}>Slide 2</div>
-        <div className={`slide ${activeSlide === 2 ? 'active' : ''}`}>Slide 3</div>
-      </div>
-      <div className="slider-controls">
-        {/* Кнопки для переключения слайдов */}
-        <button onClick={() => handleSlideChange(0)}>1</button>
-        <button onClick={() => handleSlideChange(1)}>2</button>
-        <button onClick={() => handleSlideChange(2)}>3</button>
-      </div>
+    <div className={s.slider}>
+      <div className={s.slider_background} style={sliderStyles}></div>
+      <div className={s.slider_dynamic} style={progressStyles}></div>
+      <div className={s.slider_line}></div>
     </div>
   );
 };
