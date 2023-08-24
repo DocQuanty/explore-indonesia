@@ -5,7 +5,6 @@ import BurgerMenu from '../burger-menu/Burger-menu';
 import {Search} from '../search/Search';
 
 const Header = () => {
-
 return <>
     <div className={s.header}>
             <a href='/' className={s.logo}>

@@ -1,13 +1,14 @@
 import s from "../Landing/landing.module.scss"
 import Slider from "../../components/Slider/Slider";
+import Title from "../../components/DefaultText/DefaultText"; 
 
 const Landing = () => {
 return(
      <>
     <Slider />
     <div className={s.landing} >
-     Lorem1000 Lo
-    rem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum aut amet, fugiat distinctio possimus consequatur id in! Nostrum, blanditiis.</div>
+        <Title textTransform={"uppercase"} width={"260px"} text={"explore indonesia"}/>
+    </div>
     </>
     )
 };
