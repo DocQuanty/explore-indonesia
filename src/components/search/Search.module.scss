@@ -18,3 +18,14 @@
     fill: red;
   }
 }
+.inputSearch {
+  cursor: pointer;
+  @media (max-width: $desktop) {
+    height: 20px;
+    width: 140px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 70px;
+  }
+}
