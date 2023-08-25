@@ -1,12 +1,15 @@
 @import "../../assets/style/global.scss";
+
 .flexColumns {
   display: flex;
-  background-color: grey;
-  opacity: 0.6;
-  background: #000;
+  justify-content: space-between;
+  background-color: $darkGrey;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+
   &_card {
-    padding: 40px 0 50px 71px;
-    margin: 0px 198px 0px 0px;
+    padding: 41px 90px 49px 107px;
+    flex: 33.3%;
     &:last-child {
       margin: 0;
     }
