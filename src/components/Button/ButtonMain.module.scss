@@ -1,3 +1,5 @@
+@import "../../assets/style/global.scss";
+
 .buttonMain {
   padding: 20px 50px;
   color: rgba(255, 255, 255, 0.8);
@@ -7,7 +9,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 30px */
+  line-height: calc(30 / 20 * 100%);
   border-radius: 211px;
   border: 1px solid #000;
 }

@@ -1,0 +1,42 @@
+@import "../../assets/style/global.scss";
+.flexColumns {
+  display: flex;
+  background-color: grey;
+  opacity: 0.6;
+  background: #000;
+  &_card {
+    padding: 40px 0 50px 71px;
+    margin: 0px 198px 0px 0px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.card {
+  &_number {
+    color: $red;
+    font-family: "Roboto";
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0px 0px 14px 0px;
+  }
+  &_title {
+    padding: 0px 0px 14px 0px;
+    color: $white;
+    font-family: "DM Sans";
+    font-size: 26.409px;
+    font-weight: 700;
+    line-height: calc(41.081 / 26.409 * 100%);
+  }
+
+  &_description {
+    width: 210.109px;
+    color: $darkGrey;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(28 / 18 * 100%); /* 155.556% */
+    letter-spacing: 0.5px;
+  }
+}
