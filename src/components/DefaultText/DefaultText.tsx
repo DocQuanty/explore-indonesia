@@ -2,14 +2,20 @@ import s from './defaultText.module.scss';
 import {CSSProperties } from 'react';
 type defaultText={
     text:string,
-    width:string,
+    maxWidth?:string,
     textTransform:CSSProperties['textTransform'],
+    color?:string,
+    fontSize :string,
+    fontFamily:string,
 }
-const DefaultText: React.FC<defaultText> = ({text, width="260px", textTransform="uppercase"}) => {
+const DefaultText: React.FC<defaultText> = ({text, maxWidth, textTransform="uppercase",color, fontSize, fontFamily}) => {
 
 const settingText:CSSProperties ={
-    maxWidth: width,
-    textTransform: textTransform,
+    maxWidth,
+    textTransform,
+    color,
+    fontSize,
+    fontFamily,
 }
 return <div style={settingText} className={s.text}>{text}</div>
 };

@@ -1,9 +1,6 @@
+@import "../../assets/style/global.scss";
 .text {
-  // text-transform: uppercase;
-  color: #fff;
-  font-family: "Roboto";
-  font-size: 120px;
-  font-style: normal;
   font-weight: 900;
   line-height: calc(130px / 120px * 100%);
+  color: $white;
 }
