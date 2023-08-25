@@ -3,10 +3,10 @@
   max-width: 1920px;
 }
 .wrapper {
-  position: relative;
-  height: 100vh;
+  // position: relative;
+  // max-height: 1080px;
 }
-// global colors
+// ===global-colors===
 $white: #fff;
 $grey: #ccc;
 $colorLinksMenu: #f5f5f5;
@@ -14,18 +14,18 @@ $mainButton: #dd2242;
 $linear-gradient_darkBlue: rgba(1, 132, 149, 0) 0%;
 $linear-gradient_blue: #018394 100%;
 
-// global media
+// ===global-media===
 $mobile: 767px;
 $tablet: 1024px;
 $desktop: 1279px;
 $large-desktop: 1280px;
 // $large-desktop: 1280px;
-// fonts
+
+// ===fonts===
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Roboto:ital,wght@1,900&display=swap");
-// Roboto 900
-// DM Sans 400, 700
-// reset styles
+
+// ===reset styles===
 html,
 body,
 div,

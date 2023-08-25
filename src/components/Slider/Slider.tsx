@@ -10,7 +10,6 @@ const Slider = () => {
   const backgrounds = [background01, background03, background02, background04, background05 ];
   const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
 
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
@@ -27,7 +26,7 @@ const Slider = () => {
 
   const sliderStyles = {
     backgroundImage: `url(${currentBackground})`,
-    backgroundSize: 'cover',
+    // backgroundSize: 'cover',
   };
   const progressStyles:CSSProperties  = {
     maxHeight:currentHeight,

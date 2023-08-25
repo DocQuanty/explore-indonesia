@@ -1,11 +1,11 @@
 import s from './ButtonMain.module.scss';
 import React from 'react';
 type PropsParams ={
-    padding:number,
+    padding:string,
     background?:string,
     color?:string,
     text?:string,
-    href:string,
+    href?:string,
 }
 
 const ButtonMain: React.FC<PropsParams>= ({padding,background="#dd2242",color="rgba(255, 255, 255, 0.8)",text="Start travelling", href="/"}) => {

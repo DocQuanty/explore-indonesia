@@ -5,11 +5,10 @@ import ButtonMain from "../../components/Button/ButtonMain";
 
 const Landing = () => {
 return(
-     <>
-    <Slider />
     <div className={s.landing} >
+        <Slider />
         <div className={s.landing_title}>
-        <h1 >
+        <h1 className={s.title_text} >
         <DefaultText  
             textTransform={"uppercase"} 
             maxWidth={"627px"} 
@@ -18,10 +17,12 @@ return(
             fontFamily={"Roboto"}
             />
         </h1>
-        <ButtonMain/>
+        <ButtonMain padding={"20px 50px"}/>
+        </div>
+        <div className="text-flex">
+фцвфцвawd
         </div>
     </div>
-    </>
     )
 };
 export default Landing;
