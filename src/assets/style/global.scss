@@ -1,27 +1,3 @@
-.container {
-  margin: 0 auto;
-  max-width: 1920px;
-}
-.wrapper {
-  // position: relative;
-  // max-height: 1080px;
-}
-// ===global-colors===
-$white: #fff;
-$grey: #ccc;
-$darkGrey: #939393;
-$colorLinksMenu: #f5f5f5;
-$red: #dd2242;
-$linear-gradient_darkBlue: rgba(1, 132, 149, 0) 0%;
-$linear-gradient_blue: #018394 100%;
-
-// ===global-media===
-$mobile: 767px;
-$tablet: 1024px;
-$desktop: 1279px;
-$large-desktop: 1280px;
-// $large-desktop: 1280px;
-
 // ===fonts===
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Roboto:ital,wght@1,900&display=swap");
@@ -150,4 +126,40 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+// ===global-colors===
+$white: #fff;
+$grey: #ccc;
+$darkGrey: #939393;
+$colorLinksMenu: #f5f5f5;
+$red: #dd2242;
+$linear-gradient_darkBlue: rgba(1, 132, 149, 0) 0%;
+$linear-gradient_blue: #018394 100%;
+
+// ===global-media===
+$mobile: 767px;
+$tablet: 1024px;
+$desktop: 1279px;
+$large-desktop: 1280px;
+// $large-desktop: 1280px;
+
+.container {
+  margin: 0 auto;
+  max-width: 74.69vw;
+
+  @media (max-width: $large-desktop) {
+    max-width: 85.69vw;
+  }
+  @media (max-width: $desktop) {
+    max-width: 95.69vw;
+  }
+  @media (max-width: $mobile) {
+    max-width: 90vw;
+  }
+}
+
+.wrapper {
+  // position: relative;
+  // max-height: 1080px;
 }

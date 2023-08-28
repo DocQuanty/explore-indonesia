@@ -1,0 +1,12 @@
+@import "../../assets/style/global.scss";
+.videoContainer {
+  position: absolute;
+  right: -15%;
+  bottom: -1%;
+  &_video {
+    @media (max-width: $desktop) {
+      display: none;
+    }
+    height: 254px;
+  }
+}

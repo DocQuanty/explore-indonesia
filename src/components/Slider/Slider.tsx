@@ -7,7 +7,7 @@ import background05 from '../../assets/images/backgrounds/background02.jpg';
 import s from './Slider.module.scss';
 
 const Slider = () => {
-  const backgrounds = [background01, background03, background02, background04, background05 ];
+  const backgrounds = [background01, background03, background02, background04, background05];
   const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
 
   useEffect(() => {
@@ -26,10 +26,9 @@ const Slider = () => {
 
   const sliderStyles = {
     backgroundImage: `url(${currentBackground})`,
-    // backgroundSize: 'cover',
   };
-  const progressStyles:CSSProperties  = {
-    maxHeight:currentHeight,
+  const progressStyles: CSSProperties = {
+    maxHeight: currentHeight,
     height: `${progressPercentage}%`,
     width: "4px",
     backgroundColor: "#DD2242",
@@ -43,7 +42,7 @@ const Slider = () => {
       <div className={s.slider_background} style={sliderStyles}></div>
       <div className={s.slider_dynamic} style={progressStyles}></div>
       <div className={s.slider_line}></div>
-      <div className={s.slider_number}>{`0${currentBackgroundIndex+1}`}</div>
+      <div className={s.slider_number}>{`0${currentBackgroundIndex + 1}`}</div>
     </div>
   );
 };
