@@ -14,7 +14,6 @@ const Landing = () => {
                         textTransform={"uppercase"}
                         maxWidth={"627px"}
                         text={"explore indonesia"}
-                        fontSize={"120px"}
                         fontFamily={"Roboto"}
                     />
                 </h1>

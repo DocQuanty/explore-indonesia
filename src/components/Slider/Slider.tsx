@@ -1,10 +1,10 @@
+import s from './Slider.module.scss';
 import { useState, useEffect, CSSProperties } from 'react';
 import background01 from '../../assets/images/backgrounds/background01.png';
 import background02 from '../../assets/images/backgrounds/background01.png';
 import background03 from '../../assets/images/backgrounds/background02.jpg';
 import background04 from '../../assets/images/backgrounds/background02.jpg';
 import background05 from '../../assets/images/backgrounds/background02.jpg';
-import s from './Slider.module.scss';
 
 const Slider = () => {
   const backgrounds = [background01, background03, background02, background04, background05];

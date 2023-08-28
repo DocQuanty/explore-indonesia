@@ -26,7 +26,6 @@
       bottom: -4px;
       left: 20px;
       transform: translate(-13px);
-
       background: linear-gradient(
         180deg,
         $linear-gradient_darkBlue,
@@ -35,6 +34,9 @@
     }
     @media (max-width: $mobile) {
       margin: 0px 0px 0px 0px;
+    }
+    @media (max-width: $tablet) {
+      margin-right: 22px;
     }
   }
   img {

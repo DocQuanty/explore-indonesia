@@ -24,11 +24,10 @@
     }
   }
   &_dynamic {
+    position: "absolute";
     width: "4px";
     background-color: "#DD2242";
-    position: "absolute";
-    top: 233;
-    left: 70;
+    left: -100px;
     transition: "width 0.5s ease-in-out";
   }
   &_line {
@@ -37,7 +36,7 @@
     height: 296px;
     position: absolute;
     top: 233px;
-    left: 71px;
+    left: 0px;
     z-index: -1;
   }
   &_number {
