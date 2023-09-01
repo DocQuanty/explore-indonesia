@@ -1,3 +1,4 @@
+@import "../../assets/style/global.scss";
 .slider {
   &_background {
     position: absolute;
@@ -23,6 +24,11 @@
       );
     }
   }
+  &_block {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
   &_dynamic {
     position: "absolute";
     width: "4px";
@@ -36,7 +42,7 @@
     height: 296px;
     position: absolute;
     top: 233px;
-    left: 0px;
+    left: 70px;
     z-index: -1;
   }
   &_number {

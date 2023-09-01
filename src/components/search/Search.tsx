@@ -6,7 +6,7 @@ export const Search: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [isMobile, setIsMobile] = useState(false);
 
-  
+
   const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const sanitizedValue = sanitizeInput(e.target.value);
     setSearchValue(sanitizedValue);
@@ -17,7 +17,7 @@ export const Search: React.FC = () => {
     const sanitizedDoc = parser.parseFromString(input, 'text/html');
     return sanitizedDoc.documentElement.textContent || '';
   };
-   useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 767);
     };
@@ -33,16 +33,15 @@ export const Search: React.FC = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-console.log(isMobile);
 
   return (
-    isMobile?<IconSearch setIsMobile={setIsMobile} color='white'/>:<input
-    className={s.inputSearch}
-    type="text"
-    value={searchValue}
-    onChange={inputChangeHandler}
-    placeholder="Search..."
-  />
-    
+    isMobile ? <IconSearch setIsMobile={setIsMobile} color='white' /> : <input
+      className={s.inputSearch}
+      type="text"
+      value={searchValue}
+      onChange={inputChangeHandler}
+      placeholder="Search..."
+    />
+
   );
 };

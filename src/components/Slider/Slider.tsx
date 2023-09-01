@@ -35,14 +35,16 @@ const Slider = () => {
     position: "absolute",
     top: '233px',
     left: '70px',
-    transition: "all 0.5s ease"
+    transition: "all 0.5s ease",
   };
   return (
     <div className={s.slider}>
       <div className={s.slider_background} style={sliderStyles}></div>
-      <div className={s.slider_dynamic} style={progressStyles}></div>
-      <div className={s.slider_line}></div>
-      <div className={s.slider_number}>{`0${currentBackgroundIndex + 1}`}</div>
+      <div className={s.slider_block}>
+        <div className={s.slider_dynamic} style={progressStyles}></div>
+        <div className={s.slider_line}></div>
+        <div className={s.slider_number}>{`0${currentBackgroundIndex + 1}`}</div>
+      </div>
     </div>
   );
 };
