@@ -12,7 +12,6 @@ const Landing = () => {
                 <h1 className={s.title_text} >
                     <DefaultText
                         textTransform={"uppercase"}
-                        maxWidth={"627px"}
                         text={"explore indonesia"}
                         fontFamily={"Roboto"}
                     />
