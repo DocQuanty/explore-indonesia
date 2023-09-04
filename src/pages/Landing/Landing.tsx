@@ -16,7 +16,7 @@ const Landing = () => {
                         fontFamily={"Roboto"}
                     />
                 </h1>
-                <ButtonMain padding={"20px 50px"} />
+                <ButtonMain className={"buttonMain"} href={"/start_travelling"} text={"Start travelling"} />
             </div>
             <FlexColumns />
         </div>

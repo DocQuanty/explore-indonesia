@@ -1,15 +1,38 @@
 @import "../../assets/style/global.scss";
 
 .buttonMain {
-  padding: 20px 50px;
-  color: rgba(255, 255, 255, 0.8);
+  padding: 26px 65px;
+  background: $red;
+  color: $white;
   text-decoration: none;
   text-align: center;
   font-family: "DM Sans";
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: calc(30 / 20 * 100%);
   border-radius: 211px;
   border: 1px solid #000;
+  @media (max-width: $mobile) {
+    display: block;
+    white-space: nowrap;
+    padding: 0px;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+}
+.additionalButton {
+  color: $white;
+  text-decoration: none;
+  padding: 16px 24px;
+  align-items: center;
+  border-radius: 32px;
+  background: $red;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: calc(30 / 20 * 100%);
+  @media (max-width: $mobile) {
+    // padding: 0px;
+    color: black;
+  }
 }
