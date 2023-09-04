@@ -3,12 +3,4 @@
   font-weight: 900;
   line-height: calc(130px / 120px * 100%);
   color: $white;
-  // font-size: 122px;
-  @media (max-width: $tablet) {
-    // font-size: 44.152px;
-  }
-
-  @media (max-width: $mobile) {
-    // font-size: 58.152px;
-  }
 }
