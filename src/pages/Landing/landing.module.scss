@@ -1,3 +1,4 @@
+@import "../../assets/style/global.scss";
 .landing {
   &_title {
     margin: 195px 0px 240px 0px;
@@ -5,4 +6,23 @@
 }
 .title_text {
   margin: 0px 0px 20px 0px;
+}
+.additionalLinks {
+  position: relative;
+  top: -165px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 131px;
+  width: 131px;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  a {
+    white-space: nowrap;
+    color: $white;
+    text-decoration: none;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    font-family: "DM Sans";
+    font-weight: 700;
+  }
 }

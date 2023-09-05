@@ -19,6 +19,11 @@ const Landing = () => {
                 <ButtonMain className={"buttonMain"} href={"/start_travelling"} text={"Start travelling"} />
             </div>
             <FlexColumns />
+            <div className={s.additionalLinks}>
+                <a className={s.additionalLinks_span} href="/Fb">Fb</a>
+                <a className={s.additionalLinks_span} href="/Tw">Tw</a>
+                <a className={s.additionalLinks_span} href="/In">In</a>
+            </div>
         </div>
     )
 };
