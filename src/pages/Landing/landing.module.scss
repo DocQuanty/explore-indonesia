@@ -17,6 +17,9 @@
   width: 131px;
   transform: rotate(-90deg);
   transform-origin: bottom left;
+  @media (max-width: $mobile) {
+    display: none;
+  }
   a {
     white-space: nowrap;
     color: $white;
