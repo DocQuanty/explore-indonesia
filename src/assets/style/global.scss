@@ -143,20 +143,14 @@ $desktop: 1279px;
 $large-desktop: 1280px;
 // $large-desktop: 1280px;
 
-.container {
-  margin: 0 auto;
-  max-width: 74.69vw;
+// .container {
+//   margin: 0 auto;
+//   max-width: 74.69vw;
 
-  // @media (max-width: $large-desktop) {
-  //   max-width: 85.69vw;
-  // }
-  // @media (max-width: $desktop) {
-  //   max-width: 95.69vw;
-  // }
-  @media (max-width: $mobile) {
-    max-width: 90vw;
-  }
-}
+//   @media (max-width: $mobile) {
+//     max-width: 90vw;
+//   }
+// }
 
 .wrapper {
   // position: relative;

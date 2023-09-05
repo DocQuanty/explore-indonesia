@@ -1,7 +1,23 @@
 @import "../../assets/style/global.scss";
 .landing {
+  &_container {
+    margin: 0 auto;
+    max-width: 74.69vw;
+    max-height: 808px;
+
+    @media (max-width: $mobile) {
+      max-width: 90vw;
+    }
+  }
   &_title {
     margin: 195px 0px 240px 0px;
+    @media (max-width: $tablet) {
+      margin: 110px 0px 70px 0px;
+      overflow: hidden;
+    }
+    @media (max-width: $mobile) {
+      margin: 95px 0px 50px 0px;
+    }
   }
 }
 .title_text {
@@ -17,9 +33,13 @@
   width: 131px;
   transform: rotate(-90deg);
   transform-origin: bottom left;
+  @media (max-width: $tablet) {
+    left: 70px;
+  }
   @media (max-width: $mobile) {
     display: none;
   }
+
   a {
     white-space: nowrap;
     color: $white;

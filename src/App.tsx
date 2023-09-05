@@ -1,15 +1,14 @@
 import Header from "./components/Header/Header"
-import Landing from "./pages/Landing/Landing"
+import BlockNav from "./pages/BlockNav/BlockNav"
 
 function App() {
-   return (
+  return (
     <>
       <div className="wrapper">
-        <Header/>
-        <div className="container">
-        <Landing/>
-      </div>
-    </div>
+        <Header />
+        <BlockNav />
+        <div>awdawd</div>
+      </div >
     </>
   )
 }
