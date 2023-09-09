@@ -1,0 +1,9 @@
+@import "../../assets/style/global.scss";
+.container {
+  margin: 0 auto;
+  max-width: 74.69vw;
+
+  @media (max-width: $mobile) {
+    max-width: 90vw;
+  }
+}

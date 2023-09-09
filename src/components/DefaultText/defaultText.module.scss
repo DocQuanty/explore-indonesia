@@ -3,4 +3,18 @@
   font-weight: 900;
   line-height: calc(130px / 120px * 100%);
   color: $white;
+  &_main {
+    font-family: "Roboto";
+    font-size: 120px;
+    font-weight: 900;
+    line-height: calc(130 / 120 * 100%);
+    text-transform: uppercase;
+  }
+  &_additions {
+    color: $white;
+    font-family: DM Sans;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: calc(50 / 42 * 100%);
+  }
 }

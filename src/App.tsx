@@ -1,13 +1,14 @@
 import Header from "./components/Header/Header"
-import BlockNav from "./pages/BlockNav/BlockNav"
+import BlockNavFirstBlock from "./blocks/BlockNav/BlockNav"
+import ImageTextBlock from "./blocks/ImageTextBlock/ImageTextBlock"
 
 function App() {
   return (
     <>
       <div className="wrapper">
         <Header />
-        <BlockNav />
-        <div>awdawd</div>
+        <BlockNavFirstBlock />
+        <ImageTextBlock />
       </div >
     </>
   )
