@@ -3,8 +3,11 @@
   &_container {
     margin: 0 auto;
     max-width: 74.69vw;
-    max-height: 808px;
+    max-height: 782px;
 
+    @media (max-width: $tablet) {
+      max-height: 939px;
+    }
     @media (max-width: $mobile) {
       max-width: 90vw;
     }
@@ -12,7 +15,7 @@
   &_title {
     margin: 195px 0px 240px 0px;
     @media (max-width: $tablet) {
-      margin: 110px 0px 70px 0px;
+      margin: 45px 0px 24px 0px;
       overflow: hidden;
     }
     @media (max-width: $mobile) {

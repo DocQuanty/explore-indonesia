@@ -1,20 +1,22 @@
 @import "../../assets/style/global.scss";
 
 .wrapperBtn {
-  max-width: 271px;
-  padding: 26px 65px;
-  background: $red;
-  border-radius: 211px;
-  border: 1px solid #000;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 82px;
   @media (max-width: $mobile) {
-    white-space: nowrap;
-    padding: 0px;
-    max-width: 100%;
-    padding: 15px 0;
+    display: block;
+    height: 42px;
   }
 }
 .buttonMain {
+  max-width: 271px;
+  padding: 26px 65px;
+  white-space: nowrap;
+  border-radius: 211px;
+  border: 1px solid #000;
+  background: $red;
+
   color: $white;
   text-decoration: none;
   font-family: "DM Sans";
@@ -25,6 +27,8 @@
     display: block;
     white-space: nowrap;
     max-width: 100%;
+    padding: 5px 10px;
+    text-align: center;
   }
 }
 .additionalButton {
