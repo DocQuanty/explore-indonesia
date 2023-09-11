@@ -8,7 +8,7 @@ type defaultText = {
     color?: string,
     fontFamily: string,
 }
-const DefaultText: React.FC<defaultText> = ({ text, textTransform = "uppercase", fontFamily }) => {
+const DefaultText: React.FC<defaultText> = ({ text, textTransform = "uppercase", fontFamily, color }) => {
 
     function mediaScreen(screen: number): object {
         console.log(screen);
@@ -36,7 +36,7 @@ const DefaultText: React.FC<defaultText> = ({ text, textTransform = "uppercase",
         ...styles,
         // maxWidth,
         textTransform,
-        // color,
+        color,
         fontFamily,
     }
     console.log(settingText);

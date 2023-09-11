@@ -17,8 +17,6 @@ const ButtonMain: React.FC<PropsParams> = ({ text, href, className }) => {
         return s.lowerBtn
     }
 
-    return <a href={href} className={nameClass(className)}>
-        {text}
-    </a>
+    return <div className={s.wrapperBtn}> <a href={href} className={nameClass(className)}>{text}</a></div>
 };
 export default ButtonMain;
