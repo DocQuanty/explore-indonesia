@@ -1,32 +1,32 @@
 @import "../../assets/style/global.scss";
-.text {
-  font-weight: 900;
-  line-height: calc(130px / 120px * 100%);
-  color: $white;
 
-  &_additions {
-    color: $white;
-    font-family: "DM Sans";
-    font-size: 42px;
-    font-weight: 700;
-    line-height: calc(50 / 42 * 100%);
-  }
-}
 .main_title {
   color: $white;
-  width: 627px;
+  max-width: 627px;
   font-family: "Roboto";
   font-size: 120px;
   font-weight: 900;
   line-height: calc(130 / 120 * 100%);
   text-transform: uppercase;
+  @media (max-width: $desktop) {
+    font-size: 67px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 58px;
+  }
 }
 .title {
   color: $white;
+  max-width: 479.501px;
   font-family: "DM Sans";
   font-size: 42px;
   font-weight: 700;
   line-height: calc(50 / 42 * 100%);
+  @media (max-width: $mobile) {
+    font-size: 40px;
+    max-width: 314px;
+    line-height: calc(40 / 46 * 100%);
+  }
 }
 .additional_GreyText {
   color: $grey;
@@ -35,4 +35,12 @@
   font-weight: 400;
   line-height: calc(28 / 18 * 100%);
   letter-spacing: 0.18px;
+  max-width: 407.575px;
+  @media (max-width: $desktop) {
+    font-size: 67px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    max-width: 315px;
+  }
 }
