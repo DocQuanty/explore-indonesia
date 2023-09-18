@@ -1,5 +1,5 @@
-import VideoContainer from '../VideoContainer/VideoContainer';
 import s from './FlexColumns.module.scss';
+import VideoContainer from '../VideoContainer/VideoContainer';
 
 const FlexColumns = () => {
     const arr = [

@@ -1,5 +1,5 @@
-import DefaultText from '../../components/DefaultText/DefaultText';
 import s from './ImageTextBlock.module.scss';
+import DefaultText from '../../components/DefaultText/DefaultText';
 
 const ImageTextBlock = () => {
     return <div className={s.imageText}>

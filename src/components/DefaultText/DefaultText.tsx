@@ -1,47 +1,20 @@
 import s from './defaultText.module.scss';
-import { CSSProperties } from 'react';
-
+// main_title, title, additional_GreyText
 type defaultText = {
     text: string,
-    maxWidth?: string,
-    textTransform: CSSProperties['textTransform'],
-    color?: string,
-    fontFamily: string,
+    className:string
 }
-const DefaultText: React.FC<defaultText> = ({ text, textTransform = "uppercase", fontFamily, color }) => {
-
-    function mediaScreen(screen: number): object {
-        console.log(screen);
-
-        if (screen >= 1024) {
-            return {
-                maxWidth: "627px",
-                fontSize: "120px",
-            }
-
-        } else if (screen <= 1024 && screen >= 767) {
-            return {
-                fontSize: "80px",
-            }
-        } else if (screen <= 766) {
-            return {
-                maxWidth: "314px",
-                fontSize: "58px",
-            }
+const DefaultText: React.FC<defaultText> = ({text, className}) => {
+    function nameClass(className: string): string {
+        if (className == "main_title") {
+            return s.main_title
+        } else if (className == "title") {
+            return s.title
+        }else if(className == "additional_GreyText"){
+            return s.additional_GreyText
         }
-        return {};
+        return s.lowerBtn
     }
-    const styles = mediaScreen(window.innerWidth);
-    const settingText: CSSProperties = {
-        ...styles,
-        // maxWidth,
-        textTransform,
-        color,
-        fontFamily,
-    }
-    console.log(settingText);
-
-
-    return <div style={settingText} className={s.text}>{text}</div>
+    return <div className={nameClass(className)}>{text}</div>
 };
-export default DefaultText; 
+export default DefaultText;

@@ -3,18 +3,36 @@
   font-weight: 900;
   line-height: calc(130px / 120px * 100%);
   color: $white;
-  &_main {
-    font-family: "Roboto";
-    font-size: 120px;
-    font-weight: 900;
-    line-height: calc(130 / 120 * 100%);
-    text-transform: uppercase;
-  }
+
   &_additions {
     color: $white;
-    font-family: DM Sans;
+    font-family: "DM Sans";
     font-size: 42px;
     font-weight: 700;
     line-height: calc(50 / 42 * 100%);
   }
+}
+.main_title {
+  color: $white;
+  width: 627px;
+  font-family: "Roboto";
+  font-size: 120px;
+  font-weight: 900;
+  line-height: calc(130 / 120 * 100%);
+  text-transform: uppercase;
+}
+.title {
+  color: $white;
+  font-family: "DM Sans";
+  font-size: 42px;
+  font-weight: 700;
+  line-height: calc(50 / 42 * 100%);
+}
+.additional_GreyText {
+  color: $grey;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: calc(28 / 18 * 100%);
+  letter-spacing: 0.18px;
 }
