@@ -7,9 +7,22 @@
     max-width: 90vw;
   }
 }
+.imageText_flex {
+  position: relative;
+}
+.image {
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  img {
+    max-width: 100%;
+  }
+}
+
 .text {
   &_title {
     padding: 215px 0px 0px 0px;
+    background-color: red;
   }
 }
 .imageText {

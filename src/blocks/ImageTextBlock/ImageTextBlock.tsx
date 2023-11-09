@@ -1,10 +1,11 @@
 import s from './ImageTextBlock.module.scss';
 import DefaultText from '../../components/DefaultText/DefaultText';
+import imgBackground from '../../assets/images/backgrounds/Rectangle 13.jpg'
 
 const ImageTextBlock = () => {
     return <div className={s.imageText}>
         <div className={s.imageText_flex}>
-            <div className={s.image}></div>
+            <div className={s.image}><img src={imgBackground} alt="" /></div>
             <div className={s.text}>
                 <div className={s.text_title}>
                     <DefaultText text='The walkways of Indonesia spellbind' className='title' />
