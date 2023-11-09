@@ -1,4 +1,7 @@
 import s from './ButtonMain.module.scss';
+
+// === VARIANTS FOR BTN: buttonMain, additionalButton ===
+
 import React from 'react';
 type PropsParams = {
     text: string,

@@ -1,30 +1,58 @@
 @import "../../assets/style/global.scss";
+
+.futureCards {
+  position: relative;
+  background-image: url("../../assets/images/backgrounds/block2.1_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.futureCardsBackground {
+  background-color: rgba(1, 9, 30, 0.9);
+}
 .container {
   margin: 0 auto;
   max-width: 74.69vw;
-
   @media (max-width: $mobile) {
     max-width: 90vw;
   }
 }
-.imageText_flex {
-  position: relative;
+.blockFlex {
+  padding: 207px 0px 97px 0px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+    padding: 40px 0px 33px 0px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 .image {
-  top: 0;
-  position: absolute;
-  z-index: -1;
-  img {
+  overflow: hidden;
+  max-width: 630px;
+  margin: 0px 10px 0px 0px;
+  @media (max-width: $desktop) {
     max-width: 100%;
   }
-}
-
-.text {
-  &_title {
-    padding: 215px 0px 0px 0px;
-    background-color: red;
+  @media (max-width: $mobile) {
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+    border-radius: 12px;
+    clip-path: polygon(0.1% 0%, 100% 0%, 100% 100%, 0.1% 100%);
   }
 }
-.imageText {
-  background-color: rgb(0, 0, 0.5);
+// block text
+.text {
+  max-width: 479px;
+}
+.textTitle {
+  padding: 57px 0px 42px 0px;
+  @media (max-width: $desktop) {
+    padding: 33px 0px 42px 0px;
+  }
+}
+.textContent {
+  padding: 0px 0px 32px 0px;
 }

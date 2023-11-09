@@ -15,7 +15,7 @@ const BlockNav = () => {
                         className={"main_title"}
                     />
                 </h1>
-                <ButtonMain className={"buttonMain"} href={"/start_travelling"} text={"Start travelling"} />
+                <ButtonMain className={"buttonMain"} href={"/startTraveling"} text={"Start travelling"} />
             </div>
             <div className={s.landing_flexColumns}>
                 <FlexColumns />
