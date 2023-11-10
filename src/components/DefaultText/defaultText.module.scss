@@ -29,6 +29,7 @@
   }
 }
 .additional_GreyText {
+  display: block;
   color: $grey;
   font-family: "DM Sans";
   font-size: 18px;
@@ -36,6 +37,7 @@
   line-height: calc(28 / 18 * 100%);
   letter-spacing: 0.18px;
   max-width: 407.575px;
+  overflow: auto;
   @media (max-width: $desktop) {
     font-size: 17px;
   }

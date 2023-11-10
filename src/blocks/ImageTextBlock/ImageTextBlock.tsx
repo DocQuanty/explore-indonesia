@@ -1,27 +1,39 @@
 import s from './ImageTextBlock.module.scss';
+
 import DefaultText from '../../components/DefaultText/DefaultText';
 import ButtonMain from '../../components/Button/ButtonMain';
-import roadImg from '../../assets/images/backgrounds/road.jpg'
 
-const ImageTextBlock = () => {
+// import roadImg from '../../assets/images/backgrounds/road.jpg'
+
+type textObj={
+    title:string,
+    describe:string
+}
+
+type imageTextObj = {
+    img: string,
+    text:textObj
+}
+
+
+const ImageTextBlock:React.FC<imageTextObj>= ({img, text}) => {  
     return (
         <div className={s.futureCards}>
-
 
             <div className={s.futureCardsBackground}>
                 <div className={s.container}>
                     <div className={s.blockFlex}>
-                        {/* img */}
+                        {/* imgBlock */}
                         <div className={s.image}>
-                            <img src={roadImg} alt="roadImg" />
+                            <img src={img} alt="roadImg" />
                         </div>
-                        {/* text */}
+                        {/* textBlock */}
                         <div className={s.text}>
                             <div className={s.textTitle}>
-                                <DefaultText text='The walkways of Indonesia spellbind' className={"title"} />
+                                <DefaultText text={text.title} className={"title"} />
                             </div>
                             <div className={s.textContent}>
-                                <DefaultText text='Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus. ' className={"additional_GreyText"} />
+                                <DefaultText text={text.describe} className={"additional_GreyText"} />
                             </div>
                             <ButtonMain className={"additionalButton"} href='/LearnMore' text='Learn More' />
                         </div>
