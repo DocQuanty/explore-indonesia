@@ -18,11 +18,7 @@ type imageTextObj = {
 
 const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient, flexReverse }) => {
     function gradientClass(gradient: string): string {
-        if (gradient == "top") {
-            return s.futureCardsBackgroundTop
-        }
-        return s.futureCardsBackgroundBottom
-
+        return gradient == "top" ? s.futureCardsBackgroundTop : s.futureCardsBackgroundBottom
     }
     function flexReverseClass(flexReverse: string): string {
         return flexReverse == "flex" ? s.blockFlex : s.blockFlexReverse
