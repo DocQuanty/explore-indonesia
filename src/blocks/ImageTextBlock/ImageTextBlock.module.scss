@@ -33,6 +33,17 @@
     margin: 0 auto;
   }
 }
+.blockFlexReverse {
+  padding: 207px 0px 97px 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+    padding: 40px 0px 33px 0px;
+    display: block;
+    margin: 0 auto;
+  }
+}
 .image {
   overflow: hidden;
   max-width: 630px;

@@ -15,8 +15,8 @@ function App() {
       <div className="wrapper">
         <Header />
         <BlockNavFirstBlock />
-        <ImageTextBlock img={roadImg} text={textBlockObj1} />
-        <ImageTextBlock img={palmOcean} text={textBlockObj2} gradient="top" />
+        <ImageTextBlock img={roadImg} text={textBlockObj1} gradient="bot" flexReverse="flex" />
+        <ImageTextBlock img={palmOcean} text={textBlockObj2} gradient="top" flexReverse="revers" />
         <SliderBlock />
       </div >
     </>
