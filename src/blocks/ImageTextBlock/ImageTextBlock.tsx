@@ -3,20 +3,18 @@ import s from './ImageTextBlock.module.scss';
 import DefaultText from '../../components/DefaultText/DefaultText';
 import ButtonMain from '../../components/Button/ButtonMain';
 
-// import roadImg from '../../assets/images/backgrounds/road.jpg'
-
-type textObj={
-    title:string,
-    describe:string
+type textObj = {
+    title: string,
+    describe: string
 }
 
 type imageTextObj = {
     img: string,
-    text:textObj
+    text: textObj
 }
 
 
-const ImageTextBlock:React.FC<imageTextObj>= ({img, text}) => {  
+const ImageTextBlock: React.FC<imageTextObj> = ({ img, text }) => {
     return (
         <div className={s.futureCards}>
 

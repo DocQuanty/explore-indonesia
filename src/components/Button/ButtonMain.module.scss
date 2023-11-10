@@ -3,8 +3,6 @@
 .wrapperBtn {
   display: flex;
   align-items: center;
-  // height: 82px;
-
   @media (max-width: $mobile) {
     display: block;
   }
@@ -45,7 +43,6 @@
   @media (max-width: $mobile) {
     display: block;
     white-space: nowrap;
-    max-width: 100%;
     padding: 16px 24px;
     text-align: center;
   }
