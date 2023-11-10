@@ -45,8 +45,6 @@ const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient, flexRever
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 
