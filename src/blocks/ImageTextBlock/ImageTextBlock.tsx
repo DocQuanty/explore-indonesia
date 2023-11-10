@@ -11,14 +11,20 @@ type textObj = {
 type imageTextObj = {
     img: string,
     text: textObj
+    gradient?: string
 }
 
 
-const ImageTextBlock: React.FC<imageTextObj> = ({ img, text }) => {
+const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient }) => {
+    function gradientClass(gradient: string): string {
+        if (gradient == "top") {
+            return s.futureCardsBackgroundTop
+        }
+        return s.futureCardsBackgroundBottom
+    }
     return (
         <div className={s.futureCards}>
-
-            <div className={s.futureCardsBackground}>
+            <div className={gradientClass(gradient)}>
                 <div className={s.container}>
                     <div className={s.blockFlex}>
                         {/* imgBlock */}
@@ -38,6 +44,8 @@ const ImageTextBlock: React.FC<imageTextObj> = ({ img, text }) => {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 

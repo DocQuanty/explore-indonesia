@@ -7,9 +7,15 @@
   background-size: cover;
   background-position: center;
 }
-.futureCardsBackground {
+.futureCardsBackgroundBottom {
+  background: linear-gradient(0deg, #010a20 -10%, rgba(1, 10, 32, 0) 100%);
   background-color: rgba(1, 9, 30, 0.9);
 }
+.futureCardsBackgroundTop {
+  background: linear-gradient(180deg, #010a20 -10%, rgba(1, 10, 32, 0) 100%);
+  background-color: rgba(1, 9, 30, 0.9);
+}
+
 .container {
   margin: 0 auto;
   max-width: 74.69vw;
