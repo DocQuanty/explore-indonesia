@@ -3,9 +3,13 @@ import s from './SliderBlockSecrets.module.scss';
 
 const SliderBlockSecrets = () => {
     const images = [
-        'https://via.placeholder.com/600x300/FF5733/FFFFFF',
-        'https://via.placeholder.com/600x300/33FF57/FFFFFF',
-        'https://via.placeholder.com/600x300/5733FF/FFFFFF',
+        'https://via.placeholder.com/405x300/FF5733/FFFFFF',
+        'https://via.placeholder.com/405x300/33FF57/FFFFFF',
+        'https://via.placeholder.com/405x300/5733FF/FFFFFF',
+        'https://via.placeholder.com/405x300/FF5733/FFFFFF',
+        'https://via.placeholder.com/405x300/33FF57/FFFFFF',
+        'https://via.placeholder.com/405x300/5733FF/FFFFFF',
+
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -23,12 +27,13 @@ const SliderBlockSecrets = () => {
     };
 
     return (
-        <div className={s.slider}>
+        <div className={s.slider}>  
             <div className={s.sliderImages} style={{ transform: `translateX(-${currentImage * 100}%)` }}>
                 {images.map((url, index) => (
                     <div key={index} className={s.image} style={{ backgroundImage: `url(${url})` }} />
                 ))}
             </div>
+            {/* navigation */}
             <div className={s.arrows}>
                 <div className={`${s.arrow} ${s.arrowPrev}`} onClick={prevSlide}>
                     &#9665;
