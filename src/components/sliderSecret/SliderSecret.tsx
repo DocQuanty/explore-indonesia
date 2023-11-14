@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import s from './SliderBlockSecrets.module.scss';
+import s from './sliderSecret.module.scss';
+
+import { useState } from 'react';
 
 import imgSlider_01 from "../../assets/images/jpg/Slider_01.jpg"
 import imgSlider_02 from "../../assets/images/jpg/Slider_02.jpg"
 import imgSlider_03 from "../../assets/images/jpg/Slider_03.jpg"
 
-const SliderBlockSecrets = () => {
-    const sliderTitle="Explore Our Secrets"
+const SliderSecret = () => {
     const images = [
         imgSlider_01,
         imgSlider_02,
@@ -34,7 +34,6 @@ const SliderBlockSecrets = () => {
 
     return (
         <div className={s.slider}>
-            <h1 className={s.sliderTitle}>{sliderTitle}</h1>  
             <div className={s.sliderImages} style={{ transform: `translateX(-${currentImage * 90}%)` }}>
                 {images.map((url, index) => (
                     <div key={index} className={s.image} style={{ backgroundImage: `url(${url})` }} />
@@ -43,10 +42,8 @@ const SliderBlockSecrets = () => {
             {/* navigation */}
             <div className={s.arrows}>
                 <div className={`${s.arrow} ${s.arrowPrev}`} onClick={prevSlide}>
-                    &#9665;
                 </div>
                 <div className={`${s.arrow} ${s.arrowNext}`} onClick={nextSlide}>
-                    &#9655;
                 </div>
             </div>
             {/* pagination */}
@@ -62,5 +59,4 @@ const SliderBlockSecrets = () => {
         </div>
     );
 };
-
-export default SliderBlockSecrets;
+export default SliderSecret;

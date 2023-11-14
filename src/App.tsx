@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header"
 import BlockNavFirstBlock from "./blocks/BlockNav/BlockNav"
 import ImageTextBlock from "./blocks/ImageTextBlock/ImageTextBlock"
-import SliderBlockSecrets from "./components/SliderBlock/SliderBlockSecrets"
+import SliderSecretsBlock from "./components/SliderBlock/SliderSecretsBlock"
 
 import roadImg from './assets/images/jpg/road.jpg'
 import palmOcean from './assets/images/jpg/palmOcean.jpg'
@@ -18,7 +18,7 @@ function App() {
         <BlockNavFirstBlock />
         <ImageTextBlock img={roadImg} text={textBlockObj1} gradient="bot" flexReverse="flex" />
         <ImageTextBlock img={palmOcean} text={textBlockObj2} gradient="top" flexReverse="revers" />
-        <SliderBlockSecrets />
+        <SliderSecretsBlock />
       </div >
     </>
   )
