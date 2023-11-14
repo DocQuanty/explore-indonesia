@@ -3,8 +3,11 @@ import SliderSecret from '../sliderSecret/SliderSecret';
 
 const SliderSecretsBlock = () => {  
    return <div className={s.SliderBlockSecrets}>
+    <div className={s.SliderBlockBackground}></div>
         <div className={s.sliderTitle}>Explore Our Secrets</div>
-        <SliderSecret />
+        <div className={s.sliderSecret}>
+            <SliderSecret />
+        </div>
     </div>
 };
 
