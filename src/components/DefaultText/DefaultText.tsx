@@ -1,6 +1,6 @@
 import s from './defaultText.module.scss';
 
-// ===VARIANTS FOR DEFAULTTEXT COMPONENT: main_title, title, additional_GreyText===
+// ===VARIANTS FOR DEFAULTTEXT COMPONENT: text="" className="main_title" | title" | additional_GreyText ===
 
 type defaultText = {
     text: string,

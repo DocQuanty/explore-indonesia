@@ -15,10 +15,35 @@ const SliderSecret = () => {
         'https://via.placeholder.com/405x300/FF5733/FFFFFF',
         'https://via.placeholder.com/405x300/33FF57/FFFFFF',
         'https://via.placeholder.com/405x300/5733FF/FFFFFF',
-
     ];
 
     const [currentImage, setCurrentImage] = useState(1);
+    const [startX, setStartX] = useState<number | null>(null)
+    const [endX, setEndX] = useState<number | null>(null);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setEndX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (startX !== null && endX !== null) {
+            const deltaX = endX - startX;
+            if (deltaX > 50) {
+                // Swipe to the right
+                setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+            } else if (deltaX < -50) {
+                // Swipe to the left
+                setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+            }
+        }
+
+        setStartX(null);
+        setEndX(null);
+    };
 
     const nextSlide = () => {
         setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -28,13 +53,15 @@ const SliderSecret = () => {
         setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     };
 
-    const selectSlide = (index) => {
+    const selectSlide = (index: number) => {
         setCurrentImage(index);
     };
 
     return (
         <div className={s.slider}>
-            <div className={s.sliderImages} style={{ transform: `translateX(-${currentImage * 90}%)` }}>
+            {/* slider */}
+            <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd} className={s.sliderImages} style={{ transform: `translateX(-${currentImage * 90}%)` }}>
                 {images.map((url, index) => (
                     <div key={index} className={s.image} style={{ backgroundImage: `url(${url})` }} />
                 ))}
