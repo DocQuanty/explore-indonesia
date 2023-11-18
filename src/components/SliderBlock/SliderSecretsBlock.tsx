@@ -10,12 +10,12 @@ const SliderSecretsBlock = () => {
             <SliderSecret />
         </div>
         <div className={s.SliderBlockNumber}>
-            <section className={s.SliderBlockNumber_mainTitle}>
-                <div className={s.mainTitle}>
+            <section className={s.NumberBlock}>
+                <div className={s.NumberBlock_mainTitle}>
                     By The Numbers
                 </div>
-                <div className={s.mainDescription}>
-                    <DefaultText text="By The Numbers" className='additional_GreyText' />
+                <div className={s.NumberBlock_mainDescription}>
+                    <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit." className='additional_GreyText' />
                 </div>
             </section>
             <div>
