@@ -4,7 +4,7 @@ import s from './defaultText.module.scss';
 
 type defaultText = {
     text: string,
-    className: string
+    className: string,
 }
 const DefaultText: React.FC<defaultText> = ({ text, className }) => {
     function nameClass(className: string): string {
@@ -14,6 +14,8 @@ const DefaultText: React.FC<defaultText> = ({ text, className }) => {
             return s.title
         } else if (className == "additional_GreyText") {
             return s.additional_GreyText
+        } else if (className == "additional_GreyText_center") {
+            return s.additional_GreyText_center
         }
         return s.lowerBtn
     }

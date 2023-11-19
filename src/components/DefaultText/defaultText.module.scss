@@ -38,6 +38,12 @@
   letter-spacing: 0.18px;
   max-width: 407.575px;
   overflow: auto;
+  &_center {
+    margin: 0 auto;
+    color: $grey;
+    text-align: center;
+    line-height: calc(28 / 18 * 100%);
+  }
   @media (max-width: $desktop) {
     font-size: 17px;
   }
