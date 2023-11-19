@@ -1,4 +1,5 @@
 import s from './SliderSecretsBlock.module.scss';
+
 import SliderSecret from '../sliderSecret/SliderSecret';
 import DefaultText from '../DefaultText/DefaultText';
 import NumberBlockCards from "../NumberBlockCards/NumberBlockCards.tsx";
@@ -22,11 +23,8 @@ const SliderSecretsBlock = () => {
                 </div>
                 {/* Title-section-end */}
                 <NumberBlockCards />
-                awdawd
                 {/* cards-item*/}
-
             </section>
-
         </div>
     </div>
 };

@@ -5,8 +5,9 @@ import s from './defaultText.module.scss';
 type defaultText = {
     text: string,
     className: string,
+    color?:string | undefined
 }
-const DefaultText: React.FC<defaultText> = ({ text, className }) => {
+const DefaultText: React.FC<defaultText> = ({ text, className, color}) => {
     function nameClass(className: string): string {
         if (className == "main_title") {
             return s.main_title
@@ -19,6 +20,6 @@ const DefaultText: React.FC<defaultText> = ({ text, className }) => {
         }
         return s.lowerBtn
     }
-    return <div className={nameClass(className)}>{text}</div>
+    return <div style={{color:color}} className={nameClass(className)}>{text}</div>
 };
 export default DefaultText;
