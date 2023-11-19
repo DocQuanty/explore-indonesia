@@ -1,6 +1,7 @@
 import s from './SliderSecretsBlock.module.scss';
 import SliderSecret from '../sliderSecret/SliderSecret';
 import DefaultText from '../DefaultText/DefaultText';
+import NumberBlockCards from "../NumberBlockCards/NumberBlockCards.tsx";
 
 const SliderSecretsBlock = () => {
     return <div className={s.SliderBlockSecrets}>
@@ -19,27 +20,11 @@ const SliderSecretsBlock = () => {
                 <div className={s.NumberBlock_mainDescription}>
                     <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit." className='additional_GreyText_center' />
                 </div>
+                {/* Title-section-end */}
+                <NumberBlockCards />
+                awdawd
                 {/* cards-item*/}
-                <div className={s.NumberBlockCard}>
-                    <div className={s.NumberBlockCard_flexCards}>
-                        <div className={s.NumberBlockCard_title}>100+</div>
-                        <div className={s.NumberBlockCard_description}>
-                            <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero." className='additional_GreyText_center' />
-                        </div>
-                    </div>
-                    <div className={s.NumberBlockCard_flexCards}>
-                        <div className={s.NumberBlockCard_title}>43,000+</div>
-                        <div className={s.NumberBlockCard_description}>
-                            <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero." className='additional_GreyText_center' />
-                        </div>
-                    </div>
-                    <div className={s.NumberBlockCard_flexCards}>
-                        <div className={s.NumberBlockCard_title}>30+</div>
-                        <div className={s.NumberBlockCard_description}>
-                            <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero." className='additional_GreyText_center' />
-                        </div>
-                    </div>
-                </div>
+
             </section>
 
         </div>

@@ -1,0 +1,61 @@
+@import "../../assets/style/global.scss";
+
+.NumberBlock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // height: 794px;
+  background-color: #020c21;
+  opacity: 0.9;
+  &_mainTitle {
+    margin: 201px 0px 0px 0px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+    line-height: calc(90 / 60 * 100%);
+    @media (max-width: $mobile) {
+      margin: 66px 0px 0px 0px;
+      font-size: 40px;
+    }
+  }
+  &_mainDescription {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(28 / 18 * 100%);
+    letter-spacing: 0.5px;
+  }
+}
+
+.NumberBlockCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 0px 244px 0px;
+  @media (max-width: $mobile) {
+    display: block;
+    margin: 0px 0px 62px 0px;
+  }
+  &_flexCards {
+  }
+  &_title {
+    color: $red;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 42.137px;
+    font-weight: 700;
+    line-height: calc(49.16 / 42.137 * 100%);
+    letter-spacing: 0.386px;
+  }
+  &_description {
+    max-width: 295px;
+    @media (max-width: $mobile) {
+      max-width: 314px;
+      margin: 0 auto 80px auto;
+    }
+  }
+}
