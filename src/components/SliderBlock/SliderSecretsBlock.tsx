@@ -17,12 +17,16 @@ const SliderSecretsBlock = () => {
                 <div className={s.NumberBlock_mainDescription}>
                     <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit." className='additional_GreyText' />
                 </div>
-            </section>
-            <div>
-                card
-                card
-                card
+                <div>
+                <div className={s.NumberBlockCard}>
+                    <div className={s.NumberBlockCard_wrapper}>
+                        <div className={s.NumberBlockCard_title}>100+</div>
+                        <div className={s.NumberBlockCard_description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</div>
+                    </div>
+                </div>
             </div>
+            </section>
+            
         </div>
     </div>
 };
