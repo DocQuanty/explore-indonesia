@@ -13,14 +13,16 @@
   }
   &_title {
     max-width: 500px;
+    text-align: center;
     margin: 32px auto;
   }
   &_content {
     max-width: 450px;
+    // text-align: center;
     margin: 36px auto;
   }
   &_link {
-    max-width: 200px;
+    max-width: 190px;
     margin: 0 auto;
   }
 }

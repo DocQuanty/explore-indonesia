@@ -15,6 +15,7 @@ const SliderSecretsBlock = () => {
         <div className={s.SliderBlockNumber}>
             {/* Title-section */}
             <section className={s.NumberBlock}>
+                <div className="NumberBlock_wrapper">
                 <div className={s.NumberBlock_mainTitle}>
                     By The Numbers
                 </div>
@@ -24,6 +25,7 @@ const SliderSecretsBlock = () => {
                 {/* Title-section-end */}
                 <NumberBlockCards />
                 {/* cards-item*/}
+                </div>
             </section>
         </div>
     </div>

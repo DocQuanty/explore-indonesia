@@ -9,7 +9,7 @@ const NumberBlockCardData = [
 
 const NumberBlockCard = () => {
     return (
-        <div className={s.NumberBlockCard}>
+        <section className={s.NumberBlockCard}>
             {NumberBlockCardData.map((item, index) => (
                 <div key={index} className={s.NumberBlockCard_flexCards}>
                     <div className={s.NumberBlockCard_title}>{item.title}</div>
@@ -18,7 +18,7 @@ const NumberBlockCard = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
 };
 
