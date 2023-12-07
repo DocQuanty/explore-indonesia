@@ -1,0 +1,30 @@
+@import "../../assets/style/global.scss";
+
+.LiveLikeBlock {
+  &_wrapper {
+  }
+  &_title {
+    // text-align: center;
+    // color: grey;
+    // /* H3 */
+    // font-family: "DM Sans";
+    // font-size: 42px;
+    // font-style: normal;
+    // font-weight: 700;
+    // line-height: calc(50 / 42 * 100%);
+  }
+  &_video {
+    width: 1056px;
+    height: 594px;
+    background-color: grey;
+  }
+}
+
+.LiveLikeBlock_wrapperCard {
+  &_card {
+  }
+  &_title {
+  }
+  &_text {
+  }
+}
