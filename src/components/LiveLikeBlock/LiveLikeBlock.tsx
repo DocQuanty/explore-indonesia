@@ -1,40 +1,59 @@
 import React from 'react';
 import s from './LiveLikeBlock.module.scss';
 import DefaultText from '../DefaultText/DefaultText';
+import Card_Img01 from "../../assets/images/jpg/LiveLikeBlockCard_01.jpg"
+import Card_Img02 from "../../assets/images/jpg/LiveLikeBlockCard_02.jpg"
 
-const data=[
-    {title:"Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.",
-    video:null,
-    cards:[
-        {title:"In The Country", text:"   Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore praesentium earum a recusandae mollitia, quia vero obcaecati cupiditate necessitatibus doloribus incidunt quibusdam vel delectus rem ut voluptas. Dolores nulla itaque minus modi placeat perspiciatis velit magni illum labore. Ullam perferendis ad hic voluptatum unde qui? Quisquam nesciunt tenetur porro aut reiciendis laudantium est dicta vitae earum consequuntur omnis incidunt ab quasi provident facilis aliquam, reprehenderit dignissimos ad! A, mollitia sint dolores aperiam fugiat laborum porro harum dignissimos ad? Praesentium modi aliquid id odit sed! At quisquam fugit hic molestias, ea nesciunt esse alias expedita cupiditate officiis iste vitae voluptates ut iusto dolores? Ratione fugiat quia natus voluptatum ullam dolore rerum odio impedit, veritatis dolores iste laborum vitae totam quas harum quis dolor a dolorum mollitia minus? Pariatur vero ipsa nihil voluptas tempore tenetur, accusamus beatae quam odio quis ullam labore est similique? Corrupti temporibus neque ratione sint repellat fuga aspernatur voluptate numquam dolorum, quaerat ex? Numquam at voluptatibus voluptatem sed mollitia ad, molestias quia porro reiciendis animi soluta a sunt inventore exercitationem earum placeat illum architecto incidunt aut velit! Consequuntur praesentium a similique modi quae laudantium voluptatibus dicta soluta obcaecati. Corporis impedit tempore incidunt ipsa neque natus voluptatibus eveniet id."},
-        {title:"In The City", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in."}
+const data = [
+  {
+    title: "Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.",
+    video: [{ title: "Indonesia The Ultimate Travel Guide Best Places to Visit | Explore The Emerald of the Equator", src: "https://www.youtube.com/embed/204O_xorrHk", width: "100%", height: "594", allowSetting: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" }],
+    cards: [
+      { img: Card_Img01, title: "In The Country", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus." },
+      { img: Card_Img02, title: "In The City", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in." }
     ]
-        
-}
+
+  }
 ]
 const LiveLikeBlock = () => {
-    return (
-      <section className={s.LiveLikeBlock}>
-        {data.map((el, index) => (
-          <div className={s.LiveLikeBlock_wrapper} key={index}>
-            <div className={s.LiveLikeBlock_title}>
-                <DefaultText text={el.title} className={"title"} color={"#000"} />
-                {el.title}</div>
-            <div className={s.LiveLikeBlock_video}>{el.video}
-            </div>
-            <div className={s.LiveLikeBlock_wrapperCard}>
-              {el.cards.map((card, i) => (
-                <div key={i} className={s.wrapperCard_card}>
-                    <div key={i} className={s.wrapperCard_title}>{card.title}</div>
-                    <div key={i} className={s.wrapperCard_text}>{card.text}</div>
-                </div>
-              ))}
-            </div>
+  return (
+    <section className={s.LiveLikeBlock}>
+      {data.map((el, index) => (
+        <div className={s.LiveLikeBlock_wrapper} key={index}>
+          <div className={s.LiveLikeBlock_title}>
+            <DefaultText text={el.title} className={"title"} color={"#000"} />
           </div>
-        ))}
-      </section>
-    );
-  };
-  
-  export default LiveLikeBlock;
-  
+          <div className={s.LiveLikeBlock_video}>
+            {el.video.map((videoSetting, i) => (
+              <iframe
+                key={i}
+                width={videoSetting.width}
+                height={videoSetting.height}
+                src={videoSetting.src}
+                title={videoSetting.title}
+                allow={videoSetting.allowSetting}></iframe>
+            ))}
+          </div>
+          <div className={s.LiveLikeBlock_wrapperCard}>
+            {el.cards.map((card, i) => (
+              <div key={i} className={s.wrapperCard_card}>
+                <div className={s.card_img}>
+                  <img src={card.img} alt="card-img" />
+                </div>
+                <div className={s.card_textBlock}>
+                  <div className={s.text_titleBlock}>{card.title}</div>
+                  <div className={s.textBlock}>
+                    <DefaultText text={el.title} className={"additional_GreyText"} color={"#000"} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+      }
+    </section >
+  );
+};
+
+export default LiveLikeBlock;

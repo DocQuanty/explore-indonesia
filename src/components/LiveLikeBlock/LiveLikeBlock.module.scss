@@ -1,30 +1,32 @@
 @import "../../assets/style/global.scss";
 
 .LiveLikeBlock {
+  // background-color: red;
   &_wrapper {
+    max-width: 74.69vw;
+    margin: 0 auto;
   }
   &_title {
-    // text-align: center;
-    // color: grey;
-    // /* H3 */
-    // font-family: "DM Sans";
-    // font-size: 42px;
-    // font-style: normal;
-    // font-weight: 700;
-    // line-height: calc(50 / 42 * 100%);
+    max-width: 1056px;
+    margin: 0 auto;
+    padding: 140px 0px 111px 0px;
+    text-align: center;
+    line-height: calc(50 / 42 * 100%);
   }
   &_video {
-    width: 1056px;
-    height: 594px;
-    background-color: grey;
+    margin: 0 auto;
+    max-width: 1056px;
+    padding: 0px 0px 125px 0px;
+  }
+  &_wrapperCard {
+    display: flex;
   }
 }
 
-.LiveLikeBlock_wrapperCard {
+.wrapperCard {
   &_card {
+    display: flex;
   }
-  &_title {
-  }
-  &_text {
-  }
+}
+.card_text {
 }
