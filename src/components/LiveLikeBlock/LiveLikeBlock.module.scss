@@ -33,22 +33,37 @@
     padding: 140px 0px 111px 0px;
     text-align: center;
     line-height: calc(50 / 42 * 100%);
+    @media (max-width: $tablet) {
+      padding: 70px 0px 50px 0px;
+    }
   }
   &_video {
     margin: 0 auto;
     max-width: 1056px;
     padding: 0px 0px 125px 0px;
+    @media (max-width: $tablet) {
+      padding: 0px 0px 60px 0px;
+    }
   }
   &_wrapperCard {
     max-width: 1500px;
     display: flex;
     justify-content: space-around;
+    @media (max-width: $tablet) {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 233px;
+    }
   }
 }
 
 .wrapperCard {
   &_card {
     display: flex;
+    @media (max-width: $desktop) {
+      display: block;
+    }
   }
   &_card_img {
   }
