@@ -5,11 +5,12 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     z-index: -1;
     background-image: url("../../assets/images/backgrounds/OurHillsBlockBackground.svg");
     background-position: bottom;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   &_title {
