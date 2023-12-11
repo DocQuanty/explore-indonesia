@@ -33,7 +33,6 @@
   font-weight: 400;
   line-height: calc(28 / 18 * 100%);
   letter-spacing: 0.18px;
-  // max-width: 407.575px;
   overflow: auto;
   &_center {
     margin: 0 auto;
@@ -46,6 +45,5 @@
   }
   @media (max-width: $mobile) {
     font-size: 16px;
-    max-width: 315px;
   }
 }

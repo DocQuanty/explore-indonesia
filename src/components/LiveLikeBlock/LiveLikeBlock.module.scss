@@ -52,6 +52,7 @@
     @media (max-width: $tablet) {
       display: block;
       margin: 0 auto;
+      padding: 0px 0px 50px 0px;
       text-align: center;
       max-width: 233px;
     }
@@ -61,8 +62,10 @@
 .wrapperCard {
   &_card {
     display: flex;
+    margin: 0px 0px 255px 0px;
     @media (max-width: $desktop) {
       display: block;
+      margin: 0px 0px 60px 0px;
     }
   }
   &_card_img {

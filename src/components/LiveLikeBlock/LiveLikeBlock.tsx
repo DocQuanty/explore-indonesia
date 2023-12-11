@@ -34,7 +34,8 @@ const LiveLikeBlock = () => {
                 height={videoSetting.height}
                 src={videoSetting.src}
                 title={videoSetting.title}
-                allow={videoSetting.allowSetting}></iframe>
+                allow={videoSetting.allowSetting}>
+                </iframe>
             ))}
           </div>
           <div className={s.LiveLikeBlock_wrapperCard}>
