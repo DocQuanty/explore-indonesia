@@ -18,12 +18,15 @@ const data = [
 const LiveLikeBlock = () => {
   return (
     <section className={s.LiveLikeBlock}>
+      <div className={s.LiveLikeBlock_background}></div>
+      {/* map on block */}
       {data.map((el, index) => (
         <div className={s.LiveLikeBlock_wrapper} key={index}>
           <div className={s.LiveLikeBlock_title}>
-            <DefaultText text={el.title} className={"title"} color={"#000"} />
+            <DefaultText text={el.title} className={"title"} color={"#fff"} />
           </div>
           <div className={s.LiveLikeBlock_video}>
+            {/* map on video */}
             {el.video.map((videoSetting, i) => (
               <iframe
                 key={i}
@@ -35,15 +38,18 @@ const LiveLikeBlock = () => {
             ))}
           </div>
           <div className={s.LiveLikeBlock_wrapperCard}>
+            {/* map on cards */}
             {el.cards.map((card, i) => (
               <div key={i} className={s.wrapperCard_card}>
                 <div className={s.card_img}>
                   <img src={card.img} alt="card-img" />
                 </div>
-                <div className={s.card_textBlock}>
-                  <div className={s.text_titleBlock}>{card.title}</div>
-                  <div className={s.textBlock}>
-                    <DefaultText text={el.title} className={"additional_GreyText"} color={"#000"} />
+                <div className={s.cardText}>
+                  <div className={s.cardText_titleBlock}>
+                    <DefaultText text={card.title} className={"additional_GreyText"} color={"#fff"} />
+                  </div>
+                  <div className={s.cardText_textBlock}>
+                    <DefaultText text={card.text} className={"additional_GreyText"} color={"#808080"} />
                   </div>
                 </div>
               </div>
