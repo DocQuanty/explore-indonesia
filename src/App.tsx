@@ -8,6 +8,8 @@ import palmOcean from './assets/images/jpg/palmOcean.jpg'
 import OurHillsBlock from "./components/OurHillsBlock/OurHillsBlock"
 import LiveLikeBlock from "./components/LiveLikeBlock/LiveLikeBlock"
 import SliderSecretsBlock from "./components/SliderBlock/SliderSecretsBlock"
+import GettingThere from "./components/GettingThere/GettingThere"
+
 
 
 const textBlockObj1 = { title: "The walkways of Indonesia spellbind", describe: "Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus." }
@@ -25,6 +27,7 @@ function App() {
         <OurHillsBlock />
         <LiveLikeBlock />
         <PhotoGalleryBlock />
+        <GettingThere />
       </div >
     </>
   )

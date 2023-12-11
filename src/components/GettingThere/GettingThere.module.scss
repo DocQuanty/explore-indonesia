@@ -1,0 +1,22 @@
+.gettingThere {
+  &_title {
+  }
+  &_card {
+  }
+  &_cardThere {
+    position: relative;
+  }
+}
+
+.cardThere {
+  &_number {
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+  }
+}
