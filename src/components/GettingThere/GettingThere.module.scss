@@ -8,11 +8,12 @@
   }
   margin: 0 auto;
   &_title {
-    padding: 119px 0px 60px 0px;
+    padding: 119px 0px 60px 400px;
   }
   &_cardThere {
     position: relative;
     display: flex;
+    justify-content: center;
     margin: 0px 0px 90px 0px;
   }
 }
