@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './LiveLikeBlock.module.scss';
 import DefaultText from '../DefaultText/DefaultText';
 import Card_Img01 from "../../assets/images/jpg/LiveLikeBlockCard_01.jpg"

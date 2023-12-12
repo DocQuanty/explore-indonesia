@@ -1,22 +1,64 @@
+@import "../../assets/style/global.scss";
+
 .gettingThere {
-  &_title {
+  background-color: #dce8f2;
+  &_wrapper {
+    max-width: 74.69vw;
+    margin: 0 auto;
   }
-  &_card {
+  margin: 0 auto;
+  &_title {
+    padding: 119px 0px 60px 0px;
   }
   &_cardThere {
     position: relative;
+    display: flex;
+    margin: 0px 0px 90px 0px;
   }
 }
 
 .cardThere {
-  &_number {
-    position: absolute;
-    z-index: -1;
-    top: -10px;
-    left: 100px;
-    width: 60px;
-    height: 60px;
+  &_numberSection {
+    display: flex;
+    flex: 0 1 auto;
+    margin: 0px 44px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: #dd2242;
     border-radius: 50%;
-    background-color: red;
+    color: #fff;
+    height: 58.6px;
+    width: 58.6px;
+  }
+  &_symbol {
+    font-size: 26.409px;
+    font-family: "DM Sans";
+    font-weight: 500;
+    fill: currentColor;
+    height: 50%;
+    width: 50%;
+  }
+  &_textBlock {
+    flex: 1;
+    max-width: 1030px;
+  }
+}
+.textBlock {
+  &_title {
+    padding: 0px 0px 24px 0px;
+    color: #010a20;
+    font-family: "DM Sans";
+    font-size: 26.409px;
+    font-weight: 700;
+    line-height: calc(41 / 26.4 * 100%);
+  }
+  &_text {
+    color: rgba(21, 20, 57, 0.4);
+    font-family: "DM Sans";
+    font-size: 23.475px;
+    font-weight: 400;
+    line-height: calc(38.146 / 23.475 * 100%);
   }
 }
