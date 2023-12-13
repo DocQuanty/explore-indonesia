@@ -9,6 +9,7 @@ import OurHillsBlock from "./components/OurHillsBlock/OurHillsBlock"
 import LiveLikeBlock from "./components/LiveLikeBlock/LiveLikeBlock"
 import SliderSecretsBlock from "./components/SliderBlock/SliderSecretsBlock"
 import GettingThere from "./components/GettingThere/GettingThere"
+import Footer from "./components/Footer/Footer"
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <LiveLikeBlock />
         <PhotoGalleryBlock />
         <GettingThere />
+        <Footer />
       </div >
     </>
   )

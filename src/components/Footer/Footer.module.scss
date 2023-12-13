@@ -1,0 +1,19 @@
+@import "../../assets/style/global.scss";
+.footer {
+  margin: 0px 153px 0px 70px;
+  display: flex;
+  justify-content: space-between;
+  //   background-color: $dblue;
+  &_logo {
+  }
+  &_menu {
+    max-width: 280px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin-right: 36px;
+    }
+  }
+  &_social {
+  }
+}
