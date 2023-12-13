@@ -1,6 +1,6 @@
 import s from './GettingThere.module.scss';
 import DefaultText from '../DefaultText/DefaultText';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 const data = [
   { title: "Bookings your flights", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim." },
@@ -14,58 +14,50 @@ type IterationState = number;
 const GettingThere = () => {
   // ==========STATE==========
   const [number] = useState<IterationState>(0);
-  const [arrHeight, setArrHeight] = useState<number[]>([]);
+  const [card, setCard] = useState<Array<{ elHeight: number }>>([]);
+
+  const refs = useRef<Array<React.RefObject<HTMLDivElement>>>([]);
+
   // ==========STATE==========
 
-  // ==================FUCNCTION==================
+  // ==================FUNCTION==================
   const numberIteration = (index: number) => {
     console.log(number + index + 1);
     return number !== null ? number + index + 1 : null;
   };
 
-  // const elementRefs = data.map(() => useRef<HTMLDivElement | null>(null));
-
-
-  // useLayoutEffect(() => {
-  //   const updatedArrHeight = data.map((el, index) => {
-  //     const element = elementRefs[index]?.current?.getBoundingClientRect().height;
-  //     console.log(element);
-
-  //     if (element) {
-  //       const height = element.offsetHeight;
-  //       return height;
-  //     }
-  //     return null; // или любое другое значение, если элемент не существует
-  //   });
-
-  // }, [elementRefs]);
-  const ref = useRef(null);
   useLayoutEffect(() => {
-    const { height } = ref.current.getBoundingClientRect();
-    console.log(height);
+    const updatedCardArray = data.map((el, index) => {
+      const element = refs.current[index];
+      const elHeight = element ? element.getBoundingClientRect().height : 0;
+      console.log(element);
 
-  })
-
-
-  const lineStyles = {
-    position: "absolute",
-    top: "57px",
-    width: "2px",
-    height: "210px",
-    backgroundColor: "rgba(21, 20, 57, 0.4)",
-    opacity: "0.3",
-    zIndex: "0",
-  };
+      return {
+        elHeight: elHeight,
+      };
+    });
+    setCard(updatedCardArray);
+  }, [data]);
 
   const paintLine = (index: number) => {
     if (index === data.length - 1) {
       return null;
     }
-    console.log();
+    const height = card[index]?.elHeight
+    const lineStyles = {
+      position: "absolute",
+      top: "57px",
+      width: "2px",
+      height: `${height + 33}px`,
+      backgroundColor: "rgba(21, 20, 57, 0.4)",
+      opacity: "0.3",
+      zIndex: "0",
+    };
 
     return <div style={lineStyles}></div>;
   };
-  // ==================FUCNCTION==================
+
+  // ==================FUNCTION==================
 
   return (
     <section className={s.gettingThere}>
@@ -74,7 +66,7 @@ const GettingThere = () => {
           <DefaultText text={"Getting there"} className={'title'} color={"#010A20"} />
         </div>
         {data.map((el, i) => (
-          <div ref={ref} key={i} className={s.gettingThere_cardThere}>
+          <div ref={(ref) => refs.current[i] = ref} key={i} className={s.gettingThere_cardThere}>
             <div className={s.cardThere_numberSection}>
               {paintLine(i)}
               <div className={s.cardThere_symbol}>
@@ -93,3 +85,4 @@ const GettingThere = () => {
 };
 
 export default GettingThere;
+
