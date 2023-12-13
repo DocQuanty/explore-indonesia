@@ -40,7 +40,8 @@ const GettingThere = () => {
       return null;
     }
     const height = card[index]?.elHeight
-    const lineStyles = {
+
+    const lineStyles: React.CSSProperties = {
       position: "absolute",
       top: "57px",
       width: "2px",
@@ -52,6 +53,11 @@ const GettingThere = () => {
 
     return <div style={lineStyles}></div>;
   };
+
+  const additionSection = () => {
+    return <div className={s.additionSection}></div>;
+  }
+
   // ====================================
   return (
     <section className={s.gettingThere}>
@@ -70,6 +76,7 @@ const GettingThere = () => {
             <div className={s.cardThere_textBlock}>
               <h4 className={s.textBlock_title}>{el.title}</h4>
               <div className={s.textBlock_text}>{el.text}</div>
+              {additionSection ? additionSection : null}
             </div>
           </div>
         ))}
