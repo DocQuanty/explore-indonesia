@@ -12,17 +12,15 @@ const data = [
 type IterationState = number;
 
 const GettingThere = () => {
-  // ==========STATE==========
+  // =====================
   const [number] = useState<IterationState>(0);
   const [card, setCard] = useState<Array<{ elHeight: number }>>([]);
 
   const refs = useRef<Array<React.RefObject<HTMLDivElement>>>([]);
+  // ====================
 
-  // ==========STATE==========
-
-  // ==================FUNCTION==================
+  // ====================================
   const numberIteration = (index: number) => {
-    console.log(number + index + 1);
     return number !== null ? number + index + 1 : null;
   };
 
@@ -30,8 +28,6 @@ const GettingThere = () => {
     const updatedCardArray = data.map((el, index) => {
       const element = refs.current[index];
       const elHeight = element ? element.getBoundingClientRect().height : 0;
-      console.log(element);
-
       return {
         elHeight: elHeight,
       };
@@ -56,9 +52,7 @@ const GettingThere = () => {
 
     return <div style={lineStyles}></div>;
   };
-
-  // ==================FUNCTION==================
-
+  // ====================================
   return (
     <section className={s.gettingThere}>
       <div className={s.gettingThere_wrapper}>
