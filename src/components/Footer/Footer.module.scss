@@ -1,19 +1,89 @@
 @import "../../assets/style/global.scss";
+
 .footer {
-  margin: 0px 153px 0px 70px;
-  display: flex;
-  justify-content: space-between;
-  //   background-color: $dblue;
-  &_logo {
-  }
-  &_menu {
-    max-width: 280px;
+  background-color: $dblue;
+  &_wrapper {
+    max-width: 74.69vw;
+    margin: 0 auto;
+    padding: 39px 0px 46px 0px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+  &_logo {
+    text-decoration: none;
+    display: flex;
+    margin: 0px 124px 0px 0px;
+    font-size: 23.961px;
+    font-weight: 900;
+    line-height: calc(21.684 / 23.961 * 100%);
+    letter-spacing: 0.315px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    @media (max-width: $tablet) {
+      margin: 0px 15px 0px 0px;
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+      margin: 0px 0px 36px 0px;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+  &_menu {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    @media (max-width: $mobile) {
+      display: block;
+    }
     a {
+      text-decoration: none;
       margin-right: 36px;
+      color: #fff;
+      font-family: "DM Sans";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: calc(28 / 18 * 100%);
+      letter-spacing: 0.5px;
+      transition: all 0.4s ease-in-out;
+      @media (max-width: $tablet) {
+        margin-right: 5px;
+      }
+      @media (max-width: $mobile) {
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+        padding: 0px 0px 36px 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: $red;
+      }
     }
   }
   &_social {
+    display: flex;
+    align-items: center;
   }
+}
+.logoText {
+  &_textUp {
+    color: $red;
+  }
+  &_textDown {
+    color: $white;
+  }
+}
+.footer_social {
 }
