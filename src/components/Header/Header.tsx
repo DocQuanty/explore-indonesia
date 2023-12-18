@@ -6,7 +6,7 @@ import {Search} from '../search/Search';
 
 const Header = () => {
 return <>
-    <div className={s.header}>
+    <section id='header' className={s.header}>
             <a href='/' className={s.logo}>
                 <img src={logoRose} alt="logoRose" />
                 <div className={s.textLogo}>Explore Indonesia</div>
@@ -21,7 +21,7 @@ return <>
                 <Search />
                 <BurgerMenu/>
             </div>
-    </div>
+    </section>
 </>
 };
 export default Header;

@@ -4,9 +4,11 @@ import logoRose from "../../assets/images/icons/header/logo-rose.svg"
 import facebook from "../../assets/images/facebook.svg"
 import linkedin from "../../assets/images/linkedin.svg"
 import gmail from "../../assets/images/g-solid.svg"
+import ButtonUp from '../ButtonUp/ButtonUp';
 
 const Footer = () => {
     return <footer className={s.footer}>
+        <ButtonUp />
         <div className={s.footer_wrapper}>
             <a href='/' className={s.footer_logo}>
                 <img src={logoRose} alt="logoRose" />
@@ -22,7 +24,12 @@ const Footer = () => {
                 <a href='/' className={s.menu_blog}>Blog</a>
             </div>
             <div className={s.footer_social}>
-
+                <ul className={s.social_link}>
+                    <li><a href="/"><img src={facebook} alt="" /></a></li>
+                    <li><a href="/"><img src={linkedin} alt="" /></a></li>
+                    <li><a href="/"><img src={gmail} alt="" /></a></li>
+                </ul>
+                <span className={s.social_copyright}>Copyright © 2019</span>
             </div>
         </div>
     </footer>

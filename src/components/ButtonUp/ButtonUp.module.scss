@@ -1,0 +1,22 @@
+@import "../../assets/style/global.scss";
+
+.buttonUp {
+  position: absolute;
+  top: -4vw;
+  right: 2vw;
+  width: 104px;
+  height: 104px;
+  background-color: #dd2242;
+  border-radius: 50%;
+  @media (max-width: $mobile) {
+    top: -10vw;
+    right: 40vw;
+    // transform: translate(50%, -50%);
+  }
+}
+.buttonUp_icon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
