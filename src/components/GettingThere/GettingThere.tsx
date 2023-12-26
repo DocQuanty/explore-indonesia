@@ -21,14 +21,13 @@ const GettingThere = () => {
 
   const refs = useRef<Array<React.RefObject<HTMLDivElement>>>([]);
   // ====================
-
-  // ====================================
   const numberIteration = (index: number) => {
     return number !== null ? number + index + 1 : null;
   };
 
   useLayoutEffect(() => {
-    const updatedCardArray = data.map((el, index) => {
+    const updatedCardArray = data.map((index) => {
+      // @ts-ignore
       const element = refs.current[index];
       const elHeight = element ? element.getBoundingClientRect().height + 33 : 0;
       return {
@@ -81,6 +80,7 @@ const GettingThere = () => {
           <DefaultText text={"Getting there"} className={'title'} color={"#010A20"} />
         </div>
         {data.map((el, i) => (
+          // @ts-ignore
           <div ref={(ref) => refs.current[i] = ref} key={i} className={s.gettingThere_cardThere}>
             {/* ========number======== */}
             <div className={s.cardThere_numberSection}>
