@@ -1,14 +1,16 @@
 import s from "./Search.module.scss"
+
 type IconSearchProps = {
   color: string;
   setIsMobile: (param: boolean) => void;
 };
-const IconSearch: React.FC<IconSearchProps>= ({color, setIsMobile}): JSX.Element => {
-  
-  const toggleHandler=()=>{
+
+const IconSearch: React.FC<IconSearchProps> = ({ color, setIsMobile }): JSX.Element => {
+
+  const toggleHandler = () => {
     setIsMobile(false)
   }
-  
+
   return (
     <svg
       className={s.inputSearch}

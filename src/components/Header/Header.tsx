@@ -2,11 +2,11 @@ import s from './Header.module.scss';
 import "../../assets/style/global.scss"
 import logoRose from "../../assets/images/icons/header/logo-rose.svg"
 import BurgerMenu from '../burger-menu/Burger-menu';
-import {Search} from '../search/Search';
+import { Search } from '../search/Search';
 
 const Header = () => {
-return <>
-    <section id='header' className={s.header}>
+    return <>
+        <section id='header' className={s.header}>
             <a href='/' className={s.logo}>
                 <img src={logoRose} alt="logoRose" />
                 <div className={s.textLogo}>Explore Indonesia</div>
@@ -19,9 +19,9 @@ return <>
             </div>
             <div className={s.navigationMenu}>
                 <Search />
-                <BurgerMenu/>
+                <BurgerMenu />
             </div>
-    </section>
-</>
+        </section>
+    </>
 };
 export default Header;

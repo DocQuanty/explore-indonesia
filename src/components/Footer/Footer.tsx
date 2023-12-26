@@ -29,7 +29,7 @@ const Footer = () => {
                     <li><a href="/"><img src={linkedin} alt="" /></a></li>
                     <li><a href="/"><img src={gmail} alt="" /></a></li>
                 </ul>
-                <span className={s.social_copyright}>Copyright © 2019</span>
+                <span className={s.social_copyright}>Copyright © 2023</span>
             </div>
         </div>
     </footer>
