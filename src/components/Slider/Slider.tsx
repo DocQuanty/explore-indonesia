@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from 'react';
+import { useState, useEffect, CSSProperties } from 'react';
 import background01 from '../../assets/images/backgrounds/background01.png';
 import background02 from '../../assets/images/backgrounds/background01.png';
 import background03 from '../../assets/images/backgrounds/background02.jpg';
