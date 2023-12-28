@@ -64,6 +64,11 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color ease-in 0.3s;
+  &:hover {
+    color: red;
+  }
+
   @media (max-width: $large-desktop) {
     margin-right: 32px;
   }
