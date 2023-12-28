@@ -14,7 +14,7 @@ const Header = () => {
             <div className={s.menu}>
                 <a className={s.headerLinks} href="/destinations">destinations</a>
                 <a className={s.headerLinks} href="/experiences">experiences</a>
-                <a className={s.headerLinks} href="/about">about</a>
+                <a className={s.headerLinks} href="/about">aboutt</a>
                 <a className={s.headerLinks} href="/gallery">gallery</a>
             </div>
             <div className={s.navigationMenu}>
