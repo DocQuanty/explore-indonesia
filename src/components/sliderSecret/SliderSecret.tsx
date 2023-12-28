@@ -6,15 +6,22 @@ import imgSlider_01 from "../../assets/images/jpg/Slider_01.jpg"
 import imgSlider_02 from "../../assets/images/jpg/Slider_02.jpg"
 import imgSlider_03 from "../../assets/images/jpg/Slider_03.jpg"
 
+import imgSlider_04 from "../../assets/images/backgrounds/background01.png"
+import imgSlider_05 from "../../assets/images/backgrounds/background02.jpg"
+import imgSlider_06 from "../../assets/images/backgrounds/background03.jpg"
+import imgSlider_07 from "../../assets/images/backgrounds/background04.jpg"
+import imgSlider_08 from "../../assets/images/backgrounds/background05.jpg"
+
 const SliderSecret = () => {
     const images = [
         imgSlider_01,
         imgSlider_02,
         imgSlider_03,
-        'https://via.placeholder.com/405x300/33FF57/FFFFFF',
-        'https://via.placeholder.com/405x300/FF5733/FFFFFF',
-        'https://via.placeholder.com/405x300/33FF57/FFFFFF',
-        'https://via.placeholder.com/405x300/5733FF/FFFFFF',
+        imgSlider_04,
+        imgSlider_05,
+        imgSlider_06,
+        imgSlider_07,
+        imgSlider_08,
     ];
 
     const [currentImage, setCurrentImage] = useState(1);

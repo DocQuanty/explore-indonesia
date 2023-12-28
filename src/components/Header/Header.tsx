@@ -7,7 +7,7 @@ import { Search } from '../search/Search';
 const Header = () => {
     return <>
         <section id='header' className={s.header}>
-            <a href='explore-indonesia/' className={s.logo}>
+            <a href='/explore-indonesia/' className={s.logo}>
                 <img src={logoRose} alt="logoRose" />
                 <div className={s.textLogo}>Explore Indonesia</div>
             </a>

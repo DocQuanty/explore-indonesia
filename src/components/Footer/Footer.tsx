@@ -18,16 +18,16 @@ const Footer = () => {
                 </div>
             </a>
             <div className={s.footer_menu}>
-                <a href='/' className={s.menu_about}>About</a>
-                <a href='/' className={s.menu_pricing}>Pricing</a>
-                <a href='/' className={s.menu_company}>Company</a>
-                <a href='/' className={s.menu_blog}>Blog</a>
+                <a href='/explore-indonesia/' className={s.menu_about}>About</a>
+                <a href='/explore-indonesia/' className={s.menu_pricing}>Pricing</a>
+                <a href='/explore-indonesia/' className={s.menu_company}>Company</a>
+                <a href='/explore-indonesia/' className={s.menu_blog}>Blog</a>
             </div>
             <div className={s.footer_social}>
                 <ul className={s.social_link}>
-                    <li><a href="/"><img src={facebook} alt="" /></a></li>
-                    <li><a href="/"><img src={linkedin} alt="" /></a></li>
-                    <li><a href="/"><img src={gmail} alt="" /></a></li>
+                    <li><a href="/explore-indonesia/"><img src={facebook} alt="facebook" /></a></li>
+                    <li><a href="/explore-indonesia/"><img src={linkedin} alt="linkedin" /></a></li>
+                    <li><a href="/explore-indonesia/"><img src={gmail} alt="gmail" /></a></li>
                 </ul>
                 <span className={s.social_copyright}>Copyright © 2023</span>
             </div>
