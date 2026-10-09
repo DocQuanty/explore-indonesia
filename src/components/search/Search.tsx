@@ -34,17 +34,29 @@ export const Search: React.FC = () => {
     };
   }, []);
 
-  const requestHandler = (e: React.MouseEvent<SVGSVGElement>) => {
-    if (e) {
-      e.preventDefault();
-      console.log(searchValue);
-      setSearchValue("");
+  // Search scrolls to the first section that mentions the query.
+  const [notFound, setNotFound] = useState(false);
+  const runSearch = () => {
+    const q = searchValue.trim().toLowerCase();
+    if (!q) return;
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id], div[id]'));
+    const hit = sections.find((el) => el.id !== 'header' && el.innerText.toLowerCase().includes(q));
+    if (hit) {
+      hit.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setSearchValue('');
+    } else {
+      setNotFound(true);
+      setTimeout(() => setNotFound(false), 600);
     }
-  }
+  };
+  const requestHandler = (e: React.MouseEvent<SVGSVGElement>) => {
+    e.preventDefault();
+    runSearch();
+  };
 
   return (
     isMobile ? <IconSearch setIsMobile={setIsMobile} color='white' /> :
-      <div className={s.inputSearchWrapper}>
+      <form className={`${s.inputSearchWrapper} ${notFound ? s.shake : ''}`} role="search" onSubmit={(e) => { e.preventDefault(); runSearch(); }}>
         <svg
           className={s.inputSearch_icon}
           onClick={requestHandler}
@@ -63,8 +75,9 @@ export const Search: React.FC = () => {
           value={searchValue}
           onChange={inputChangeHandler}
           placeholder="Search..."
+          aria-label="Search the page"
         />
-      </div>
+      </form>
 
   );
 };

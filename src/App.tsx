@@ -13,8 +13,8 @@ import Footer from "./components/Footer/Footer"
 
 
 
-const textBlockObj1 = { title: "The walkways of Indonesia spellbind", describe: "Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus." }
-const textBlockObj2 = { title: "Perfect beaches exude relaxation and fun", describe: "Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus." }
+const textBlockObj1 = { title: "The walkways of Indonesia spellbind", describe: "Boardwalks through savanna and cloud forest, with a volcano on the horizon of almost every trail." }
+const textBlockObj2 = { title: "Perfect beaches exude relaxation and fun", describe: "Snorkel the reefs of Raja Ampat, then end the day under palms on a beach you have to yourself." }
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
       <div className="wrapper">
         <Header />
         <BlockNavFirstBlock />
-        <ImageTextBlock img={roadImg} text={textBlockObj1} gradient="bot" flexReverse="flex" />
-        <ImageTextBlock img={palmOcean} text={textBlockObj2} gradient="top" flexReverse="revers" />
+        <ImageTextBlock id="destinations" img={roadImg} alt="Boardwalk through a mountain valley" text={textBlockObj1} gradient="bot" flexReverse="flex" />
+        <ImageTextBlock img={palmOcean} alt="Palm tree over a turquoise sea" text={textBlockObj2} gradient="top" flexReverse="revers" />
         <SliderSecretsBlock />
         <OurHillsBlock />
         <LiveLikeBlock />

@@ -4,16 +4,16 @@ import ButtonMain from '../Button/ButtonMain';
 
 const OurHillsBlock = () => {
 
-    return <section className={s.OurHillsBlock}>
+    return <section className={s.OurHillsBlock} id="about">
         <div className={s.OurHillsBlock_background}></div>
-        <div className={s.OurHillsBlock_title}>
+        <div className={s.OurHillsBlock_title} data-reveal>
             <DefaultText text="Our hills and valleys are like nothing you’ve seen." className="title" color='#000' />
         </div>
-        <div className={s.OurHillsBlock_content}>
-            <DefaultText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor." className="additional_GreyText_center" />
+        <div className={s.OurHillsBlock_content} data-reveal>
+            <DefaultText text="Rice terraces cut into volcanic slopes, crater lakes and jungle ridges — walk them at sunrise, before the heat and the crowds." className="additional_GreyText_center" />
         </div>
-        <div className={s.OurHillsBlock_link}>
-            <ButtonMain text="Learn More" href="/LearnMore" className='additionalButton' />
+        <div className={s.OurHillsBlock_link} data-reveal>
+            <ButtonMain text="Learn More" href="#gallery" className='additionalButton' />
         </div>
     </section>
 };

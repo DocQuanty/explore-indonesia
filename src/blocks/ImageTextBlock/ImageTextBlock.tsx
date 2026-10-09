@@ -13,9 +13,11 @@ type imageTextObj = {
     text: textObj
     gradient: string
     flexReverse: string
+    id?: string
+    alt?: string
 }
 
-const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient, flexReverse }) => {
+const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient, flexReverse, id, alt = "" }) => {
     function gradientClass(gradient: string): string {
         return gradient == "top" ? s.futureCardsBackgroundTop : s.futureCardsBackgroundBottom
     }
@@ -23,23 +25,23 @@ const ImageTextBlock: React.FC<imageTextObj> = ({ img, text, gradient, flexRever
         return flexReverse == "flex" ? s.blockFlex : s.blockFlexReverse
     }
     return (
-        <div className={s.futureCards}>
+        <div className={s.futureCards} id={id}>
             <div className={gradientClass(gradient)}>
                 <div className={s.container}>
                     <div className={flexReverseClass(flexReverse)}>
                         {/* imgBlock */}
-                        <div className={s.image}>
-                            <img src={img} alt="roadImg" />
+                        <div className={s.image} data-reveal="zoom">
+                            <img src={img} alt={alt} loading="lazy" />
                         </div>
                         {/* textBlock */}
-                        <div className={s.text}>
+                        <div className={s.text} data-reveal>
                             <div className={s.textTitle}>
                                 <DefaultText text={text.title} className={"title"} />
                             </div>
                             <div className={s.textContent}>
                                 <DefaultText text={text.describe} className={"additional_GreyText"} />
                             </div>
-                            <ButtonMain className={"additionalButton"} href='/LearnMore' text='Learn More' />
+                            <ButtonMain className={"additionalButton"} href='#secrets' text='Learn More' />
                         </div>
                     </div>
                 </div>

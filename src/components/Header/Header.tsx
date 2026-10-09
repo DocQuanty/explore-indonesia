@@ -6,16 +6,16 @@ import { Search } from '../search/Search';
 
 const Header = () => {
     return <>
-        <section id='header' className={s.header}>
+        <section id='header' className={s.header} data-reveal="down">
             <a href='/explore-indonesia/' className={s.logo}>
-                <img src={logoRose} alt="logoRose" />
+                <img src={logoRose} alt="" />
                 <div className={s.textLogo}>Explore Indonesia</div>
             </a>
             <div className={s.menu}>
-                <a className={s.headerLinks} href="/explore-indonesia/">destinations</a>
-                <a className={s.headerLinks} href="/explore-indonesia/">experiences</a>
-                <a className={s.headerLinks} href="/explore-indonesia/">about</a>
-                <a className={s.headerLinks} href="/explore-indonesia/">gallery</a>
+                <a className={s.headerLinks} href="#destinations">destinations</a>
+                <a className={s.headerLinks} href="#experiences">experiences</a>
+                <a className={s.headerLinks} href="#about">about</a>
+                <a className={s.headerLinks} href="#gallery">gallery</a>
             </div>
             <div className={s.navigationMenu}>
                 <Search />

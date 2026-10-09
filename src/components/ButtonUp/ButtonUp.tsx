@@ -3,7 +3,7 @@ import ArrowUp from "../../assets/images/arrowUp.svg"
 
 const ButtonUp = () => {
 return <section className={s.buttonUp}>
-    <a href='#header' className={s.buttonUp_icon}><img src={ArrowUp} alt="red-up-Button" /></a>
+    <a href='#header' className={s.buttonUp_icon}><img src={ArrowUp} alt="Back to top" /></a>
 </section>
 };
 export default ButtonUp;

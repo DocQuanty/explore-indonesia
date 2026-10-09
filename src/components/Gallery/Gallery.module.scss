@@ -83,3 +83,13 @@
     }
   }
 }
+
+/* 2026: phones got a scroll box inside the page (max-height 740px, overflow auto)
+   with 140px thumbnails. Now a plain two-column grid. */
+@media (max-width: $mobile) {
+  .gallerySection { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-height: none; overflow: visible; padding: 0 16px; }
+  .gallerySection_row { display: contents; }
+  .gallerySection [class*="gallerySection_img"] { max-width: none; width: 100%; height: 190px; margin: 0; }
+}
+.gallerySection img { transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.gallerySection [class*="gallerySection_img"] { border-radius: 10px; }

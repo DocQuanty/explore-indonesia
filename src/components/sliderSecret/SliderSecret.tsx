@@ -6,7 +6,7 @@ import imgSlider_01 from "../../assets/images/jpg/Slider_01.jpg"
 import imgSlider_02 from "../../assets/images/jpg/Slider_02.jpg"
 import imgSlider_03 from "../../assets/images/jpg/Slider_03.jpg"
 
-import imgSlider_04 from "../../assets/images/backgrounds/background01.png"
+import imgSlider_04 from "../../assets/images/backgrounds/background01.jpg"
 import imgSlider_05 from "../../assets/images/backgrounds/background02.jpg"
 import imgSlider_06 from "../../assets/images/backgrounds/background03.jpg"
 import imgSlider_07 from "../../assets/images/backgrounds/background04.jpg"

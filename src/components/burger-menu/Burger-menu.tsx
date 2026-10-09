@@ -12,10 +12,10 @@ const BurgerMenu = () => {
             <div className={s.burgerMenu_burgerLine}></div>
             <div className={s.burgerMenu_menuList}>
                 <ul>
-                    <li><a href="/destinations">destinations</a></li>
-                    <li><a href="/experiences">experiences</a></li>
-                    <li><a href="/about">about</a></li>
-                    <li><a href="/gallery">gallery</a></li>
+                    <li><a href="#destinations">destinations</a></li>
+                    <li><a href="#experiences">experiences</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#gallery">gallery</a></li>
                 </ul>
             </div>
         </div>

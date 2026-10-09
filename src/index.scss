@@ -1,0 +1,52 @@
+html { scroll-behavior: smooth; }
+section[id], div[id] { scroll-margin-top: 20px; }
+
+/* ---------- Motion (2026) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero title and button enter on load. */
+  [data-hero] { animation: heroIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  [data-hero] + * { animation: heroIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s both; }
+  @keyframes heroIn {
+    from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+    to { opacity: 1; transform: none; filter: none; }
+  }
+  [data-reveal="down"] { animation: headerIn 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes headerIn { from { opacity: 0; transform: translateY(-16px); } }
+
+  .reveal-ready .will-reveal { opacity: 0; transform: translateY(36px); }
+  .reveal-ready .will-reveal[data-reveal="zoom"] { transform: scale(0.94); }
+  .reveal-ready .will-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms),
+      transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms);
+  }
+}
+
+/* Hover depth on photos and buttons. */
+[data-reveal="zoom"] { overflow: hidden; }
+[data-reveal="zoom"] img { transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+[data-reveal="zoom"]:hover img { transform: scale(1.06); }
+a[class*="buttonMain"], a[class*="additionalButton"] {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
+}
+a[class*="buttonMain"]:hover, a[class*="additionalButton"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -12px rgba(221, 34, 66, 0.8);
+}
+a[class*="buttonMain"]::after, a[class*="additionalButton"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.35) 50%, transparent 80%);
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+a[class*="buttonMain"]:hover::after, a[class*="additionalButton"]:hover::after { transform: translateX(120%); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

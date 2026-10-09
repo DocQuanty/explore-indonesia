@@ -102,3 +102,20 @@
     line-height: calc(38 / 23 * 100%);
   }
 }
+
+/* 2026 fixes: on phones the step number shrank and the extra block with the
+   photo pushed the text 30px past the screen edge. */
+.cardThere_numberSection { flex: 0 0 58.6px; }
+.cardThere_textBlock { min-width: 0; }
+@media (max-width: $mobile) {
+  .gettingThere_wrapper { max-width: none; padding: 0 20px; }
+  .gettingThere_title { padding-top: 64px; padding-bottom: 36px; }
+  .gettingThere_cardThere { margin-bottom: 48px; }
+  .cardThere_numberSection { flex-basis: 40px; height: 40px; width: 40px; margin-right: 16px; }
+  .cardThere_symbol { font-size: 18px; }
+  .textBlock_title { font-size: 20px; padding-bottom: 10px; }
+  .textBlock_text, .additionSection_innerText { font-size: 16px; }
+  .additionSection { flex-direction: column; gap: 14px; margin-top: 24px; }
+  .additionSection_img { max-width: 100%; margin: 0; }
+  .additionSection_img img { width: 100%; border-radius: 10px; }
+}

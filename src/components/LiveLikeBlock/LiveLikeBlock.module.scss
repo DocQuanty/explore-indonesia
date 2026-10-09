@@ -86,3 +86,14 @@
     color: red;
   }
 }
+
+/* Responsive embed: the iframe used a fixed 594px height. */
+.LiveLikeBlock_video iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}

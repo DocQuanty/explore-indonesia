@@ -6,10 +6,10 @@ import ButtonMain from '../Button/ButtonMain';
 import imgAdd from "../../assets/images/jpg/bike.jpg"
 
 const data = [
-  { title: "Bookings your flights", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.", image: null, innerText: null },
-  { title: "Bookings your flights", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.", image: null, innerText: null }, { title: "Bookings your flights", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.", image: imgAdd, innerText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim." },
-  { title: "Bookings your flights", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.", image: null, innerText: null }
-
+  { title: "Book your flights", text: "Most international routes land in Jakarta (CGK) or Bali (DPS). From there, domestic airlines and ferries connect the islands — book inter-island legs early in high season.", image: null, innerText: null },
+  { title: "Check the entry rules", text: "Visa requirements depend on your passport and change from time to time. Check the official immigration site before you fly, and make sure your passport is valid for at least six months.", image: null, innerText: null },
+  { title: "Plan how to get around", text: "Distances between islands are bigger than they look on the map. Combine short flights for long hops with ferries and scooters for the last mile.", image: imgAdd, innerText: "On Bali and Lombok, renting a scooter is the easiest way to reach beaches and temples off the main roads — take a helmet and an international licence." },
+  { title: "Pick the season", text: "The dry season, roughly April to October, is the easiest time for trekking and diving in most regions; the wet season brings short heavy showers and greener landscapes.", image: null, innerText: null }
 ]
 
 type IterationState = number;
@@ -25,17 +25,19 @@ const GettingThere = () => {
     return number !== null ? number + index + 1 : null;
   };
 
+  // Line length = height of the step it leaves from, re-measured on resize.
   useLayoutEffect(() => {
-    const updatedCardArray = data.map((index) => {
-      // @ts-ignore
-      const element = refs.current[index];
-      const elHeight = element ? element.getBoundingClientRect().height + 33 : 0;
-      return {
-        elHeight: elHeight,
-      };
-    });
-    setCard(updatedCardArray);
-  }, [data]);
+    const measure = () => {
+      const updatedCardArray = data.map((_, index) => {
+        const element = refs.current[index] as unknown as HTMLDivElement | null;
+        return { elHeight: element ? element.getBoundingClientRect().height + 33 : 0 };
+      });
+      setCard(updatedCardArray);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
 
   const paintLine = (index: number) => {
     if (index === data.length - 1) {
@@ -45,7 +47,8 @@ const GettingThere = () => {
 
     const lineStyles: React.CSSProperties = {
       position: "absolute",
-      top: "57px",
+      top: "58px",
+      left: "calc(50% - 1.5px)",
       width: "3px",
       height: `${height}px`,
       backgroundColor: "rgba(21, 20, 57, 0.4)",
@@ -64,7 +67,7 @@ const GettingThere = () => {
       <div className={s.additionSection}>
         {img && (
           <div className={s.additionSection_img}>
-            <img src={img} alt="image" />
+            <img src={img} alt="" loading="lazy" />
           </div>
         )}
         <div className={s.additionSection_innerText}>{innerText}</div>
@@ -74,14 +77,14 @@ const GettingThere = () => {
 
   // ====================================
   return (
-    <section className={s.gettingThere}>
+    <section className={s.gettingThere} id="getting-there">
       <div className={s.gettingThere_wrapper}>
         <div className={s.gettingThere_title}>
           <DefaultText text={"Getting there"} className={'title'} color={"#010A20"} />
         </div>
         {data.map((el, i) => (
           // @ts-ignore
-          <div ref={(ref) => refs.current[i] = ref} key={i} className={s.gettingThere_cardThere}>
+          <div ref={(ref) => refs.current[i] = ref} key={i} className={s.gettingThere_cardThere} data-reveal>
             {/* ========number======== */}
             <div className={s.cardThere_numberSection}>
               {paintLine(i)}
@@ -98,7 +101,7 @@ const GettingThere = () => {
           </div>
         ))}
         <div className={s.gettingThere_button}>
-          <ButtonMain text={"Learn more"} className={"additionalButton"} href={"/"} />
+          <ButtonMain text={"Learn more"} className={"additionalButton"} href={"#header"} />
         </div>
       </div>
     </section>
