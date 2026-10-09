@@ -14,7 +14,15 @@ const VideoContainer = () => {
         mq.addEventListener('change', onChange);
         return () => mq.removeEventListener('change', onChange);
     }, []);
-    if (!wide) return null;
+    // Start the 8.5 MB clip only after the page (and the hero frame) has loaded.
+    const [loaded, setLoaded] = useState(document.readyState === 'complete');
+    useEffect(() => {
+        if (loaded) return;
+        const onLoad = () => setLoaded(true);
+        window.addEventListener('load', onLoad);
+        return () => window.removeEventListener('load', onLoad);
+    }, [loaded]);
+    if (!wide || !loaded) return null;
     return <div className={s.videoContainer}>
         <video className={s.videoContainer_video} src={indonesia} muted loop playsInline autoPlay preload="metadata" controls />
     </div>

@@ -12,16 +12,26 @@ const reducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefe
 
 // All frames stay mounted and cross-fade by opacity, so the swap never flashes
 // an unloaded image; the active frame also drifts slowly (Ken Burns).
+// Only the first frame is requested on load; every next frame is fetched in
+// the background and the slideshow advances once it has actually arrived.
 const Slider = () => {
   const [current, setCurrent] = useState(0);
+  const [ready, setReady] = useState(1); // how many frames are loaded and mounted
+
+  useEffect(() => {
+    if (ready >= backgrounds.length) return;
+    const img = new Image();
+    img.onload = () => setReady((n) => n + 1);
+    img.src = backgrounds[ready];
+  }, [ready]);
 
   useEffect(() => {
     if (reducedMotion) return;
     const intervalId = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % backgrounds.length);
+      setCurrent((prev) => (prev + 1 < ready ? prev + 1 : 0));
     }, 5000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [ready]);
 
   const progress = ((current + 1) / backgrounds.length) * 296;
   const progressStyles: CSSProperties = { height: `${progress}px` };
@@ -29,7 +39,7 @@ const Slider = () => {
   return (
     <div className={s.slider}>
       <div className={s.slider_stage} aria-hidden="true">
-        {backgrounds.map((bg, i) => (
+        {backgrounds.slice(0, ready).map((bg, i) => (
           <div
             key={i}
             className={`${s.slider_background} ${i === current ? s.isActive : ''}`}
